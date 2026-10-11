@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>FOUNDRY</title>
+<title>THE FOUNDRY</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -324,7 +324,7 @@ input[type=range]{width:100%;accent-color:var(--btn)}
 .cta h2{font-size:clamp(28px,4vw,44px);font-weight:700;letter-spacing:-.02em}
 .cta p{font-size:19px;max-width:60ch}
 .foot{background:var(--hero-bg);color:var(--hero-mute);padding-block:44px 26px}
-.foot .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:28px}
+.foot .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(4,minmax(0,1fr));gap:28px}
 @media (max-width:800px){.foot .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.foot .wrap>div:first-child{grid-column:1/-1}}
 .fbrand{display:flex;align-items:center;gap:10px;font-family:var(--fd);font-weight:700;letter-spacing:.08em;color:var(--hero-ink);margin-bottom:10px}
 .foot p{font-size:16px;line-height:1.5;max-width:40ch}
@@ -334,8 +334,9 @@ input[type=range]{width:100%;accent-color:var(--btn)}
 .foot .legalbar{grid-column:1/-1;border-top:1px solid var(--hero-line);padding-top:18px;font-size:14.5px;display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
 #spec .sec:first-of-type{padding-top:18px}
 /* ---- Home page v2: modern website layer ---- */
-.rvon .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
-.rvon .rv.in{opacity:1;transform:none}
+.rvon .rv{opacity:0;translate:0 26px;transition:opacity .75s ease,translate .8s cubic-bezier(.2,.7,.2,1),scale .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.rvon .rv.l{translate:-44px 0}.rvon .rv.r{translate:44px 0}.rvon .rv.z{translate:0 18px;scale:.94}
+.rvon .rv.in{opacity:1;translate:none;scale:none}
 .rv.d2{--d:140ms}
 .hero2{position:relative;isolation:isolate}
 .hero2 .wrap{position:relative}
@@ -575,6 +576,169 @@ input[type=range]{width:100%;accent-color:var(--btn)}
 .vcol.hot .vi{background:rgba(255,255,255,.2);color:#fff}
 .vcol .vgo{padding-top:4px}.vcol .vgo .btn{width:100%}
 @media (max-width:900px){.vcols{grid-template-columns:minmax(0,1fr)}.vcol.hot{order:-1;transform:none}.vcol ul{gap:11px}}
+
+/* ---- Pathways + consultation fees ---- */
+.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:16px}
+@media (max-width:760px){.paths{grid-template-columns:minmax(0,1fr)}}
+.path{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:12px;align-content:start;min-width:0}
+.path h3{font-size:24px;line-height:1.15}
+.path p{color:var(--muted);font-size:17px;line-height:1.5;margin:0}
+.path ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.path li{display:flex;gap:10px;align-items:flex-start;font-size:16.5px;line-height:1.4}
+.path li svg{flex:none;margin-top:3px;color:var(--accent)}
+.ptag{justify-self:start;font-family:var(--fd);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:var(--chip);border-radius:999px;padding:5px 12px}
+.pgo{padding-top:6px}
+.path.hot{background:var(--btn);border-color:var(--btn);color:#fff;box-shadow:0 22px 44px -22px rgba(194,81,31,.7)}
+.path.hot p{color:rgba(255,255,255,.88)}.path.hot li svg{color:#fff}
+.path.hot .ptag{background:rgba(255,255,255,.2);color:#fff}
+.consult{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:16px}
+.chd{display:grid;gap:4px}.chd h3{font-size:22px}.chd p{margin:0;color:var(--muted);font-size:17px}
+.cpr{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:860px){.cpr{grid-template-columns:minmax(0,1fr)}}
+.cpr li{border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:4px;align-content:start;background:var(--surface2);min-width:0}
+.cpr .cn{font-family:var(--fd);font-weight:600;font-size:16px}
+.cpr .cp{font-family:var(--fd);font-size:30px;line-height:1.1;color:var(--accent)}
+.cpr .cd{font-size:13.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.cpr .cx{font-size:16px;line-height:1.45;color:var(--muted);margin-top:4px}
+
+/* ---- Compact home ---- */
+.creatorcard{display:grid;grid-template-columns:minmax(0,.34fr) minmax(0,.66fr);background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:16px}
+@media (max-width:980px){.creatorcard{grid-template-columns:minmax(0,1fr)}}
+.cpic{min-height:220px;position:relative}
+.cpic .portrait.photo{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:50% 20%}
+@media (max-width:980px){.cpic{min-height:0;aspect-ratio:16/9}}
+.cbody{padding:24px;display:grid;gap:12px;align-content:start;min-width:0}
+.cbody h3{font-size:26px;line-height:1.15}.cbody>p{margin:0;font-size:17px}
+.paths2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.paths2{grid-template-columns:minmax(0,1fr)}}
+.path2{border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:9px;align-content:start;background:var(--surface2);min-width:0}
+.path2 h4{font-size:19px;line-height:1.2}.path2 p{margin:0;font-size:16px;line-height:1.45;color:var(--muted)}
+.path2 ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.path2 li{display:flex;gap:9px;align-items:flex-start;font-size:15.5px;line-height:1.4}
+.path2 li svg{flex:none;margin-top:3px;color:var(--accent)}
+.path2.hot{background:var(--btn);border-color:var(--btn);color:#fff}
+.path2.hot p{color:rgba(255,255,255,.9)}.path2.hot li svg{color:#fff}.path2.hot .ptag{background:rgba(255,255,255,.2);color:#fff}
+.consult2{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:10px}
+.consult2 .cl{display:grid;gap:2px}.consult2 .cl b{font-family:var(--fd);font-size:17px}.consult2 .cl small{font-size:15px;color:var(--muted)}
+.cchips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.cchips li{display:flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--surface2);border-radius:999px;padding:6px 14px;font-size:14.5px}
+.cchips b{font-family:var(--fd);color:var(--accent)}
+.cmore summary,.cmpmore>summary,.faqmore>summary{cursor:pointer;list-style:none;font-family:var(--fd);font-weight:600;font-size:15px;color:var(--accent);display:inline-flex;gap:8px;align-items:center}
+.cmore summary::-webkit-details-marker,.cmpmore>summary::-webkit-details-marker,.faqmore>summary::-webkit-details-marker{display:none}
+.cmore summary::after,.cmpmore>summary::after,.faqmore>summary::after{content:"+";font-size:20px;line-height:1}
+.cmore[open] summary::after,.cmpmore[open]>summary::after,.faqmore[open]>summary::after{content:"\2013"}
+.cdet{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.cdet li{display:grid;gap:2px;font-size:15.5px;color:var(--muted)}.cdet b{color:var(--ink)}.cdet em{font-style:normal;color:var(--accent);margin-left:6px}
+.roles.r3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.roles.r3{grid-template-columns:minmax(0,1fr)}}
+.vcol.wide{transform:none;padding:22px 24px}
+.vcol.wide ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 32px}
+@media (max-width:760px){.vcol.wide ul{grid-template-columns:minmax(0,1fr)}}
+.vcol.wide .vgo .btn{width:auto}
+.cmpmore{margin-top:16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.cmpmore[open]>summary{margin-bottom:14px}
+.vcols.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:760px){.vcols.two{grid-template-columns:minmax(0,1fr)}}
+.band.tight{padding-block:clamp(28px,4vw,48px)}
+.band.tight .head{margin-bottom:18px}
+.trgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1000px){.trgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.trgrid{grid-template-columns:minmax(0,1fr)}}
+.tri{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid var(--hero-line);border-radius:14px;padding:16px}
+.tri .ico{flex:none;width:40px;height:40px;background:rgba(255,255,255,.08);color:var(--gold)}
+.tri h3{font-size:16.5px;margin-bottom:3px}.tri p{margin:0;font-size:15px;line-height:1.45;color:var(--hero-mute)}
+.split2{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(20px,4vw,56px);align-items:start}
+@media (max-width:900px){.split2{grid-template-columns:minmax(0,1fr)}}
+.tl{display:grid;gap:8px}
+.tr{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:12px;overflow:hidden}
+.tr summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:center;padding:12px 14px}
+.tr summary::-webkit-details-marker{display:none}
+.tr summary::after{content:"";margin-left:auto;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);flex:none;transition:transform .2s}
+.tr[open] summary::after{transform:rotate(-135deg)}
+.tr .tico{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--c);color:#fff;flex:none}
+.tr .tn{display:grid;gap:1px;min-width:0}.tr .tn b{font-family:var(--fd);font-size:16.5px}.tr .tn small{font-size:14px;color:var(--muted);line-height:1.35}
+.tr dl{margin:0;padding:0 16px 14px 62px;display:grid;gap:3px;font-size:15.5px;line-height:1.45}
+.tr dt{font-family:var(--fd);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.tr dd{margin:0;color:var(--ink)}
+@media (max-width:560px){.tr dl{padding-left:16px}}
+.faqmore{background:none;border:0}
+.faqmore>summary{padding:6px 2px}
+.faq .faq.inner{margin-top:10px;max-width:none}
+@media (max-width:560px){
+ .steps2{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:12px;margin-inline:-14px;padding-inline:14px;-webkit-overflow-scrolling:touch}
+ .steps2>.step2{flex:0 0 82%;scroll-snap-align:start}
+}
+
+@media (max-width:560px){.role .portrait.photo{aspect-ratio:320/170}.cbody{padding:18px}}
+
+/* ---- How it works: finer cards ---- */
+.steps2{gap:18px}
+.step2{padding:0;display:flex;flex-direction:column;gap:0;border-radius:18px;border:1px solid var(--line);border-top:3px solid var(--c);overflow:hidden;background:var(--surface);transition:transform .25s,box-shadow .25s,border-color .25s}
+.step2:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--c)}
+.step2>*:not(.sp){padding-inline:0}
+.step2 .sp{margin:0;padding:12px 0 0;background:radial-gradient(120px 90px at 50% 70%,color-mix(in srgb,var(--c) 14%,transparent),transparent 70%),var(--surface2);border-bottom:1px solid var(--line);position:relative}
+.step2 .spot{height:116px}
+.step2 .sp .n{position:absolute;left:14px;top:12px;width:auto;height:auto;border-radius:999px;padding:4px 11px;background:var(--c);color:#fff;font-family:var(--fd);font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.step2 .sp .when{position:absolute;right:14px;top:12px;font-family:var(--fd);font-size:12px;font-weight:600;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px 10px;letter-spacing:.01em}
+.step2 .sb{padding:16px 20px 8px;display:grid;gap:6px;align-content:start}
+.step2 .sb h3{font-size:19px;line-height:1.2}
+.step2 .sb p{margin:0;font-size:16px;line-height:1.5;color:var(--muted)}
+.step2 .ex{margin:auto 14px 14px;margin-top:auto;padding:10px 12px;border:0;border-radius:12px;background:var(--surface2);display:flex;gap:10px;align-items:center;font-size:14.5px;line-height:1.4;color:var(--muted)}
+.step2 .ex .avatar2{width:30px;height:30px;margin:0;border:2px solid var(--surface);flex:none}
+.step2 .ex b{color:color-mix(in srgb,var(--c) 55%,var(--ink));font-family:var(--fd);font-weight:700;margin-right:6px}
+.step2 .ex b::after{content:":"}
+.step2 .ex span{min-width:0}
+@media (max-width:560px){.step2 .spot{height:100px}}
+
+.foot a.lk{display:block;color:var(--hero-mute);padding:5px 0;font-size:16px;text-decoration:none;overflow-wrap:anywhere}
+.foot a.lk:hover{color:#fff;text-decoration:underline}
+.ask a{color:var(--accent);font-weight:700;overflow-wrap:anywhere}
+
+/* ---- Scroll effects ---- */
+#sprog{position:fixed;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,#E5A430,#C2511F);transform:scaleX(0);transform-origin:0 50%;z-index:120;pointer-events:none}
+#totop{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;border:0;background:var(--btn);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 12px 26px -10px rgba(194,81,31,.8);opacity:0;translate:0 14px;pointer-events:none;transition:opacity .3s,translate .3s,background .2s;z-index:110}
+#totop.show{opacity:1;translate:none;pointer-events:auto}
+#totop:hover{background:var(--btn-h,#A8431A)}
+.top{transition:box-shadow .3s}
+.scrolled .top{box-shadow:0 10px 28px -14px rgba(0,0,0,.6)}
+[data-px]{translate:0 var(--py,0px);will-change:translate}
+.rv[data-px]{translate:none}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(16px)}to{opacity:1;transform:none}}
+.hero2 .copy>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero2 .copy>:nth-child(1){animation-delay:.05s}.hero2 .copy>:nth-child(2){animation-delay:.15s}.hero2 .copy>:nth-child(3){animation-delay:.28s}.hero2 .copy>:nth-child(4){animation-delay:.4s}.hero2 .copy>:nth-child(5){animation-delay:.52s}
+.hpic .hmain{animation:pop .9s cubic-bezier(.2,.7,.2,1) .2s both}
+.hpic .hc{animation-fill-mode:both}
+.hmain img,.portrait.photo{transition:scale 1.2s cubic-bezier(.2,.7,.2,1)}
+.rvon .rv:not(.in) .portrait.photo{scale:1.1}
+.btn{transition:translate .2s,box-shadow .2s,border-color .2s,background .2s}
+.btn:hover{translate:0 -2px}
+.path2,.tri,.vcol,.tr,.fact{transition:translate .25s,box-shadow .25s,border-color .25s}
+.path2:hover,.tri:hover{translate:0 -3px;box-shadow:var(--shadow)}
+.tr:hover{border-color:var(--c)}
+.date .cal{transition:rotate .35s,scale .35s}.date:hover .cal{rotate:-4deg;scale:1.06}
+@media (prefers-reduced-motion:reduce){
+ .hero2 .copy>*,.hpic .hmain{animation:none}
+ #sprog{display:none}[data-px]{translate:none}
+ .btn:hover,.path2:hover,.tri:hover{translate:none}
+}
+#main{overflow-x:clip}
+/* The gap illustration motion */
+.pic svg .gp-float,.pic svg .gp-bob,.pic svg .gp-bird,.pic svg .gp-bar,.pic svg .gp-tw{transform-box:fill-box;transform-origin:center}
+.pic svg .gp-float{animation:gpf 4.5s ease-in-out infinite}
+.pic svg .gp-bob{animation:gpb 5s ease-in-out infinite}
+.pic svg .gp-bird{animation:gpbd 3s ease-in-out infinite}
+.pic svg .gp-bar{transform-origin:bottom;animation:gpbar 3.2s ease-in-out infinite}
+.pic svg .gp-tw{animation:twk 3s ease-in-out infinite}
+.pic svg .gp-dash{animation:gpd 1.6s linear infinite}
+@keyframes gpf{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@keyframes gpb{0%,100%{translate:0 0}50%{translate:0 -3px}}
+@keyframes gpbd{0%,100%{translate:0 0}50%{translate:6px -4px}}
+@keyframes gpbar{0%,100%{scale:1 1}50%{scale:1 .82}}
+@keyframes gpd{to{stroke-dashoffset:-20}}
+@media (prefers-reduced-motion:reduce){.pic svg *{animation:none!important}}
+.pricebox{display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center;border:1px solid var(--line);background:var(--surface2);border-radius:14px;padding:10px 14px;margin:8px 0}
+.pricebox span{color:var(--muted);font-size:15px}.pricebox b{font-family:var(--fd);font-size:20px;color:var(--accent)}.pricebox small{grid-column:1/-1;color:var(--muted);font-size:14px}
 </style>
 <header class="top">
   <div class="wrap">
@@ -589,20 +753,21 @@ input[type=range]{width:100%;accent-color:var(--btn)}
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <script>
 /* ============ LEGAL TEXT (drafts) ============ */
-const ENT='[Registered entity name]';
+const ENT='THE FOUNDRY',PH='+234 810 595 0658',EM='foundry@gmail.com';
 const TERMS=[
 {h:'About these Terms',p:[
- `These Terms of Use ("Terms") govern your use of the THE FOUNDRY web platform ("the Platform"). The Platform is operated by ${ENT}, trading as THE FOUNDRY ("the Foundry", "we", "us").`,
+ `These Terms of Use ("Terms") govern your use of the THE FOUNDRY web platform ("the Platform"). The Platform is operated by ${ENT} ("the Foundry", "we", "us").`,
  'By creating an account or using the Platform you agree to these Terms. If you use the Platform for an organisation, you confirm that you have authority to bind it. If you do not agree, do not use the Platform.']},
 {h:'Defined terms',p:[{ul:[
  '<b>Creator</b>: a person who submits an Idea.','<b>Idea</b>: a problem, product concept and related material submitted through the Platform.','<b>Panelist</b>: a reviewer, judge or expert who evaluates Ideas.','<b>Partner Organisation</b>: an organisation that runs a Cohort with the Foundry.','<b>Sponsor</b> and <b>Investor</b>: organisations or individuals that provide funding, tools, expertise, market access or capital.','<b>Cohort</b>: one run of the programme, from idea call to Top 3 selection.','<b>Product Team</b>: the people assigned to build a Top 3 product.','<b>Top 3 Product</b>: an Idea selected to enter the build pathway.']}]},
 {h:'Eligibility and accounts',p:[
  'You must be 18 or over. You must give accurate information and keep it up to date. Each person may hold one account.',
  'You are responsible for your credentials and for activity under your account. Panelists, Sponsors, Partner Organisations and staff must use multi-factor sign-in. Tell us at once if you think your account has been used without permission.']},
-{h:'Your idea stays yours',p:[
+{h:'Ownership and equity',p:[
  'Submitting an Idea is an application. It is not a transfer of ownership. Intellectual property that you owned before submitting stays with you, or with its existing owner, unless you transfer it in a signed written agreement.',
  'By submitting, you give us a limited, non-exclusive licence to host, evaluate, administer and communicate about your Idea as needed to run the programme, and, where you have agreed in writing, to develop it. This licence ends when you withdraw, subject to records we must keep.',
- 'No equity, revenue share, licence, assignment or product company arises from your participation unless a separate signed agreement says so. The Foundry keeps ownership of its brand, methodology, scorecards, programme materials and the Platform software.']},
+ 'No equity, revenue share, licence, assignment or product company arises from your participation unless a separate signed agreement says so. The Foundry keeps ownership of its brand, methodology, scorecards, programme materials and the Platform software.',
+ 'If your Idea is selected for the build pathway, the Foundry, the Product Team and partners may take a stake in the product company in return for their contribution. Any stake is offered only after selection, set out in a separate written agreement that you can review before you sign, and is never a condition of applying. You decide whether to sign.']},
 {h:'Confidentiality',p:[
  'You decide what you upload. Disclose in stages and avoid uploading anything you are not willing to share with the people who will see it under the access rules in the Privacy Policy.',
  'Panelists, Sponsor experts and staff who can see Idea content are bound by confidentiality terms. We use access controls and logging, but no system is perfectly secure. If your Idea needs formal protection such as a patent filing, take independent advice before you submit.']},
@@ -614,12 +779,12 @@ const TERMS=[
 {h:'Panelists and experts',p:[
  'You must sign the panelist NDA and conflict declaration before you see any Idea. Score independently and on the criteria. Do not contact Creators about scoring outside the Platform. Do not use any Idea, or what you learn from it, for your own or your employer’s benefit. Keep your account secure and do not share scores or Idea content.']},
 {h:'Sponsors and Investors',p:[
- 'Sponsorship supports the programme. It does not buy selection, ownership, exclusivity or influence over any decision. Product-specific investment or participation is documented in a separate agreement.',
+ 'Sponsorship supports the programme. It does not buy selection, exclusivity or influence over any decision. Any stake in a product or in the Foundry is documented in a separate written agreement.',
  'The Foundry does not guarantee returns and does not give investment, legal or tax advice. Our vetting information informs your own due diligence and does not replace it. Where activity connected to investment is regulated, we will take legal advice before charging or receiving any fee for it.']},
 {h:'Partner Organisations',p:[
- 'A Partner Organisation operates under a Partner Agreement. It provides community access, resources and agreed support. It does not gain ownership of any Top 3 Product by default and has no say in who is selected. Partners may see aggregate data and, where a Creator agrees, named information.']},
+ 'A Partner Organisation operates under a Partner Agreement. It provides community access, resources and agreed support. It does not gain ownership of any Top 3 Product by default, any stake is agreed separately in writing after selection, and it has no say in who is selected. Partners may see aggregate data and, where a Creator agrees, named information.']},
 {h:'Fees, funding and compensation',p:[
- 'There is no entry fee for the competitive pathway. Optional services such as consultations are priced and described before you buy. Paying for a service has no effect on any gate decision.',
+ 'There is no entry fee for the competitive pathway. Consultations are optional, and the price is shown when you choose one, before you book. Direct build services are quoted to scope and agreed in a separate written agreement. Paying for any service has no effect on any gate decision.',
  'Product build budgets funded by Sponsors, Investors or programme funds are restricted funds used under the approved budget. Creator compensation, whether a prize, grant, stipend or fee, is defined in your agreement. You are responsible for your own tax.']},
 {h:'Your content and media',p:[
  'You keep ownership of what you upload. You allow us to store and show it to the people your settings and these Terms allow. Photography, recording and social posting need your separate consent, which you can change until an event starts. We may remove content that breaks these Terms.']},
@@ -636,15 +801,15 @@ const TERMS=[
  `To the extent the law allows, we are not liable for indirect or consequential loss, or for loss of profit or opportunity. Our total liability to you for a claim is limited to [amount to be set by counsel]. Nothing in these Terms limits liability that cannot lawfully be limited.`]},
 {h:'Indemnity',p:['You are responsible for loss we suffer because you break these Terms or because content you submit infringes another person’s rights, to the extent the law allows.']},
 {h:'Complaints and disputes',p:[
- 'Raise a complaint through the Platform or at [complaints email]. We will acknowledge it within [3] working days and respond within [10] working days. Unresolved matters go to the Steering Committee, then mediation, then [courts or arbitration to be confirmed by counsel].']},
+ `Raise a complaint through the Platform or at ${EM} or on ${PH}. We will acknowledge it within [3] working days and respond within [10] working days. Unresolved matters go to the Steering Committee, then mediation, then [courts or arbitration to be confirmed by counsel].`]},
 {h:'Changes to these Terms',p:['We publish each version with a date and a plain-language summary. We tell you about material changes and ask you to accept them before you continue. Using the Platform after the effective date means you accept the new version.']},
 {h:'Governing law',p:['These Terms are governed by the laws of the Federal Republic of Nigeria. [Jurisdiction and forum to be confirmed by counsel.]']},
-{h:'Contact',p:[`${ENT}, trading as THE FOUNDRY. [Address]. [Contact email].`]}
+{h:'Contact',p:[`${ENT}. Phone: ${PH}. Email: ${EM}. [Address].`]}
 ];
 
 const PRIVACY=[
 {h:'Who we are',p:[
- `${ENT}, trading as THE FOUNDRY, is the controller of personal data on the Platform. Contact our Data Protection Officer at [DPO email]. Registration with the Nigeria Data Protection Commission (NDPC): [status to be confirmed].`,
+ `${ENT} is the controller of personal data on the Platform. Contact our Data Protection Officer at ${EM}. Registration with the Nigeria Data Protection Commission (NDPC): [status to be confirmed].`,
  'Partner Organisations may be separate controllers for data they collect themselves, such as community lists. Where the Foundry acts on a partner’s behalf, a data processing agreement applies.']},
 {h:'What this notice covers',p:['This notice covers the Platform, our events and our communications. It applies to Creators, Panelists, Sponsors, Investors, Partner Organisation users, Product Team members, event attendees and visitors.']},
 {h:'Data we collect',p:[{tbl:{head:['Category','Examples','Source','Purpose','Basis'],rows:[
@@ -686,7 +851,7 @@ const PRIVACY=[
 {h:'Photography and recording at events',p:['We tell you about recording before an event. You can say no to recording, photos and social posts, and ask for a closed-door pitch for sensitive details. Panelists and attendees are told when filming is taking place.']},
 {h:'Data breaches',p:['If a breach is likely to put your rights at risk, we will notify the NDPC within 72 hours of becoming aware, as the Nigeria Data Protection Act 2023 requires, and tell you without undue delay where the risk is high.']},
 {h:'Changes to this notice',p:['We publish each version with a date and summary. We tell you about material changes before they take effect.']},
-{h:'Contact us',p:['Data Protection Officer: [name], [email], [address]. For data rights requests, use Settings, then Privacy, or write to us.']}
+{h:'Contact us',p:[`Data Protection Officer: [name], ${EM}, ${PH}, [address]. For data rights requests, use Settings, then Privacy, or write to us.`]}
 ];
 
 /* ============ OVERVIEW CONTENT ============ */
@@ -696,7 +861,7 @@ const GATES=[
  {t:'Pitch',who:'You and the panel',d:'You present the problem, solution, market and your commitment. The panel scores and questions you.',out:'Shortlist',when:'Pitch Night, 21 November 2026'},
  {t:'Sponsor and expert vetting',who:'Experts and sponsor experts',d:'Experts challenge your assumptions and evidence. You answer questions through the platform.',out:'Finalist pool',when:'Late November to early December'},
  {t:'Top 3 selection',who:'Panel',d:'Finalists present again. The panel scores, deliberates and records the Top 3.',out:'Top 3 announced',when:'Selection event, 12 December 2026'},
- {t:'Build readiness',who:'You and Foundry',d:'You sign agreements. Scope, budget, team and ownership are confirmed.',out:'Go, hold or exit',when:'After selection'},
+ {t:'Build readiness',who:'You and Foundry',d:'You sign agreements. Scope, budget, team and any equity terms are confirmed.',out:'Go, hold or exit',when:'After selection'},
  {t:'MVP validation',who:'Product team',d:'You test the product with real users and gather demand evidence.',out:'Continue, pivot or stop',when:'Build phase'},
  {t:'Commercial pathway',who:'You, sponsors, investors',d:'Pilots, customers, investment, licensing or distribution are explored.',out:'Launch, invest, license or iterate',when:'After validation'}];
 const CRIT=[['Problem strength',15],['User and market',15],['Innovation and differentiation',10],['Feasibility',15],['Commercial potential',15],['Impact',10],['Scalability',10],['Founder and team commitment',10]];
@@ -728,12 +893,13 @@ const lnk=(t,to)=>`<a href="#" data-goto="${to}">${t}</a>`;
 const S={tab:'home',specTab:0,idx:{creator:0,panelist:0,sponsor:0,partner:0},
  c:{
   su:{name:'Amara Okafor',email:'amara@example.com',pw:'',code:'PARAGON-C01',age:false,terms:false,priv:false,mkt:false,sent:false,ver:false,vcode:'',errs:{}},
-  pr:{skills:['Product','Community'],bio:'I run a weekly food-sharing group and want to fix how surplus food reaches families.',comm:'Paragon community',pkg:1,slot:'',booked:false},
+  pr:{skills:['Product','Community'],bio:'I run a weekly food-sharing group and want to fix how surplus food reaches families.',comm:'Paragon community',pkg:-1,slot:'',booked:false},
   ap:{step:0,title:'Surplus Food Match',problem:'Families near us cannot afford enough food while caterers and shops throw away good food at closing time.',users:'Low-income families, small caterers and food shops in our district.',noEv:false,files:[],solution:'A simple app that alerts families when nearby sellers list surplus food at a low price, with pick-up slots.',stage:'Idea only',team:'Solo',ipOwn:false,ipPrior:'None',ack:false,noConf:false,errs:{},sub:false,saved:null},
   st:{sel:3},
   pi:{tab:'prep',ready:{slides:true,demo:false,qa:false},rec:true,photo:true,social:false,closed:false},
   vq:{sel:0,reply:'',th:[[],[],[]],done:[false,false,false]},
   tp:{outcome:'sel',name:'Amara Okafor',read:{},signed:{}},
+  dr:{need:'',stage:'',summary:'',consult:'',ack:false,sent:false,errs:{}},
   bd:{tab:'ms',reason:'',type:'Scope',crs:[]}
  },
  p:{
@@ -754,8 +920,8 @@ const S={tab:'home',specTab:0,idx:{creator:0,panelist:0,sponsor:0,partner:0},
  },
  o:{
   ag:{org:'Paragon',type:'Community organisation',size:'1200',liaison:'Tunde Bakare',email:'tunde@example.org',cl:{},name:'',role:'',signed:false,errs:{}},
-  ch:{name:'Cohort 01',close:'2026-11-07',pitch:'2026-11-21',vet:'2026-11-23',top:'2026-12-12',cap:150,open:'Community first',cats:['Health','Education','Community'],pub:false},
-  mb:{tpl:0,msg:'Do you have an idea that could solve a real problem in our community? Apply to Cohort 01 of THE FOUNDRY. Ideas are scored on evidence, and your idea stays yours.',ch:{email:true,wa:true,social:false,events:true},signups:62,target:150},
+  ch:{name:'Batch 1',close:'2026-11-07',pitch:'2026-11-21',vet:'2026-11-23',top:'2026-12-12',cap:150,open:'Community first',cats:['Health','Education','Community'],pub:false},
+  mb:{tpl:0,msg:'Do you have an idea that could solve a real problem in our community? Apply to Batch 1 of THE FOUNDRY. Ideas are scored on evidence, and you keep control of your idea.',ch:{email:true,wa:true,social:false,events:true},signups:62,target:150},
   rs:{items:[{k:'Venue',d:'Main hall, 300 seats',st:'Confirmed'},{k:'Experts',d:'Three panelists nominated',st:'Pledged'},{k:'Communications',d:'Email list and two posts',st:'Delivered'},{k:'Pilot access',d:'Two partner sites for user testing',st:'Pledged'},{k:'Funding',d:'In-kind only for the pilot',st:'Confirmed'}],ex:[{n:'Adaeze Obi',f:'Law and IP',c:'No conflicts declared',st:'Nominated'}],en:'',ef:'',ec:false,rep:false}
  }
 };
@@ -787,21 +953,23 @@ function cSignup(){
    <div class="panel flat"><h3>How it works</h3>
     <p class="muted">Apply with a problem and an idea. You do not need a business plan, a team or any technical background.</p>
     <p class="muted">Experts and a panel review ideas on evidence. The strongest three get a team and a build budget.</p>
-    ${note('Your idea stays yours','Submitting is an application, not a transfer of ownership.','ok')}</div></div>`}
+    ${note('You keep control','Submitting is an application, not a transfer of ownership.','ok')}</div></div>`}
+const CONS=[['Idea Discovery Call','45 minutes, video call','A first look at your idea and a clear recommendation on next steps.','₦5,000'],['Idea Clinic','Half day','Problem definition, user and market check, and an outline of the first version.','₦10,000'],['Product Blueprint Session','2 to 3 sessions over 2 weeks','A written Product Brief with scope, risks and a 90-day plan.','₦15,000']];
 function cProfile(){
   const p=S.c.pr,pct=profPct();
-  const pk=[['Idea Discovery Call','45 minutes, video call','A first look at your idea and a clear recommendation on next steps.','Free or credited. Fee set by the Foundry.'],['Idea Clinic','Half day','Problem definition, user and market check, and an outline of the first version.','Fee set by the Foundry.'],['Product Blueprint Session','2 to 3 sessions over 2 weeks','A written Product Brief with scope, risks and a 90-day plan.','Fee set by the Foundry.']];
+  const pk=CONS;
   const sk=['Product','Design','Software','Marketing','Finance','Legal','Community','Operations'];
   return `${mh('Your profile','Tell us who you are. Everything here can be changed later.')}
   <div class="panel"><div class="row spread"><b>Profile complete</b><b id="pf-p">${pct}%</b></div><div class="meter" id="pf-m"><i style="width:${pct}%"></i></div></div>
   <div class="grid2"><div class="panel"><div class="lab">Skills</div><div class="chips">${sk.map(k=>`<button type="button" class="chip" aria-pressed="${p.skills.includes(k)}" data-act="cSkill" data-v="${k}">${k}</button>`).join('')}</div>
    ${field('pf-bio','Short bio','c.pr.bio',{area:true,rows:3,live:'cProf',count:400})}
    ${sel('pf-comm','Community','c.pr.comm',['Paragon community','Open call','Other partner community'])}</div>
-  <div class="panel"><div class="lab">Optional: readiness consultation</div>
-   <div class="grid2" style="grid-template-columns:1fr">${pk.map((x,i)=>`<button type="button" class="opt" aria-pressed="${p.pkg===i}" data-set="c.pr.pkg" data-v="${i}"><h4>${x[0]}</h4><p>${x[1]}. ${x[2]}</p><p><b>${x[3]}</b></p></button>`).join('')}</div>
+  <div class="panel"><div class="lab">Optional: book a consultation</div>
+   ${p.pkg>=0?`<div class="pricebox"><span>Price for ${esc(pk[p.pkg][0])}</span><b>${pk[p.pkg][3]}</b><small>Optional. You pay only if you book, and it never affects selection.</small></div>`:`<p class="muted">Consultations are optional. Choose one to see its price before you book.</p>`}
+   <div class="grid2" style="grid-template-columns:1fr">${pk.map((x,i)=>`<button type="button" class="opt" aria-pressed="${p.pkg===i}" data-set="c.pr.pkg" data-v="${i}"><h4>${x[0]}</h4><p>${x[1]}. ${x[2]}</p></button>`).join('')}</div>
    ${sel('pf-slot','Available slot','c.pr.slot',['Tue 13 Oct, 10:00','Thu 15 Oct, 14:00','Sat 17 Oct, 11:00'],{blank:'Choose a slot',dis:p.booked})}
-   ${p.booked?note('Booked',`${esc(pk[p.pkg][0])} on ${esc(p.slot)}. We sent a confirmation to your messages.`,'ok'):`<button type="button" class="btn dark" data-act="cBook">Book consultation</button>`}
-   ${note('Integrity','Paying for a consultation never affects any selection decision.')}</div></div>`}
+   ${p.booked?note('Booked',`${esc(pk[p.pkg][0])} (${pk[p.pkg][3]}) on ${esc(p.slot)}. We sent a confirmation and receipt to your messages.`,'ok'):`<button type="button" class="btn dark" data-act="cBook">Book consultation</button>`}
+   ${note('Optional and separate from selection','Consultations are optional. The price is shown once you choose one, and booking never affects any selection decision.')}</div></div>`}
 function profPct(){const p=S.c.pr;return 30+(p.skills.length?20:0)+(p.bio.trim().length>=40?20:0)+(p.comm?15:0)+(p.booked?15:0)}
 function cApErr(n){const a=S.c.ap,e={};
   if(n===0){if(a.title.trim().length<5)e.title='Give your idea a title of at least 5 characters.';if(a.problem.trim().length<40)e.problem='Describe the problem in at least 40 characters.'}
@@ -839,7 +1007,7 @@ function cStatus(){
    <div class="gates" role="list">${g.map((x,i)=>`<button type="button" role="listitem" class="gate ${i<cur?'done':i===cur?'cur':''}" aria-pressed="${sl===i}" data-set="c.st.sel" data-v="${i}"><span class="dot">${i<cur?'✓':i}</span><span class="t">${x.t}</span>${i===cur?pill('You are here','ember'):i<cur?pill('Done','ok'):''}</button>`).join('')}</div>
    <div class="panel"><div class="lbl">Gate ${sl}</div><h3>${d.t}</h3><p>${d.d}</p><dl class="kv"><dt>Who acts</dt><dd>${d.who}</dd><dt>Decision</dt><dd>${d.out}</dd><dt>When</dt><dd>${d.when}</dd></dl>
     ${sl===cur?note('What we need from you','Answer the three expert questions before 3 December.','warn'):sl<cur?note('Done','You passed this gate.','ok'):note('Coming up','Nothing to do yet.')}</div></div>
-  ${note('Your idea stays yours','Scores and panelist names are not shown here. You will see structured feedback after each event.')}`}
+  ${note('You keep control','Scores and panelist names are not shown here. You will see structured feedback after each event.')}`}
 function cPitch(){
   const p=S.c.pi,r=p.ready,sc=[4,4,3,3,3,4,3,5],tot=sc.reduce((a,s,i)=>a+s/5*CRIT[i][1],0);
   const tabs=`<div class="chips"><button type="button" class="chip" aria-pressed="${p.tab==='prep'}" data-set="c.pi.tab" data-v="prep">Before the pitch</button><button type="button" class="chip" aria-pressed="${p.tab==='fb'}" data-set="c.pi.tab" data-v="fb">After the pitch</button></div>`;
@@ -865,20 +1033,38 @@ function cVet(){
     ${field('vq-reply','Your answer','c.vq.reply',{area:true,rows:3,count:2000,live:'cVetLive'})}
     <div class="row"><button type="button" class="btn primary" data-act="cVetSend">Send answer</button><small class="muted">Attach evidence after sending in the full product.</small></div></div></div>
   ${note('Sponsor branding is hidden','During vetting you see the expert role, not the sponsor brand.')}`}
-const AGR=[['Participation Agreement','Confirms your commitment, roles and conduct through the build.'],['IP declaration','Records what you own and what already existed. Your pre-existing IP stays yours.'],['Creator compensation agreement','States whether payment is a prize, grant, stipend or fee, with amount, timing and conditions.'],['Top 3 Product Agreement','Sets scope, budget, milestones, ownership and any economic participation for the build.']];
+const AGR=[['Participation Agreement','Confirms your commitment, roles and conduct through the build.'],['IP declaration','Records what you own and what already existed. Your pre-existing IP stays yours.'],['Creator compensation agreement','States whether payment is a prize, grant, stipend or fee, with amount, timing and conditions.'],['Top 3 Product Agreement','Sets scope, budget, milestones and any stake in the product. You see it in full before you sign.']];
 function cTop(){
   const t=S.c.tp,n=Object.keys(t.signed).length;
   const tabs=`<div class="chips"><button type="button" class="chip" aria-pressed="${t.outcome==='sel'}" data-set="c.tp.outcome" data-v="sel">If selected</button><button type="button" class="chip" aria-pressed="${t.outcome==='not'}" data-set="c.tp.outcome" data-v="not">If not selected</button></div>`;
   if(t.outcome==='not')return `${mh('Thank you for presenting','Your idea was not chosen for the Top 3 this time.')}${tabs}
    ${note('Your idea stays yours','You keep full ownership of your idea and everything you submitted.','ok')}
    <div class="panel"><h3>What the panel said</h3><p class="muted">Strong problem and clear users. The commercial model needs more evidence of willingness to pay before it can compete for build support.</p></div>
-   <div class="grid2"><div class="panel"><h4>Next steps</h4><ul class="muted"><li>Apply in the next cohort with the new evidence.</li><li>Book a Blueprint Session.</li><li>Join the builders network.</li></ul></div><div class="panel"><button type="button" class="btn primary" data-goto="creator:1">Book a consultation</button></div></div>`;
+   <div class="grid2"><div class="panel"><h4>Next steps</h4><ul class="muted"><li>Apply in the next cohort with the new evidence.</li><li>Book a Blueprint Session.</li><li>Or have it built: start a build request.</li><li>Join the builders network.</li></ul></div><div class="panel"><div class="row"><button type="button" class="btn primary" data-goto="creator:1">Book a consultation</button><button type="button" class="btn" data-goto="creator:8">Build your product</button></div></div></div>`;
   return `${mh('You are in the Top 3','Sign four agreements to start the build. Read each one first.')}${tabs}
   <div class="panel"><div class="row spread"><b>Agreements signed</b><b>${n} of 4</b></div>${meter(n*25,'ok')}</div>
   ${field('tp-name','Type your full legal name to sign','c.tp.name')}
   <div class="grid2" style="grid-template-columns:1fr">${AGR.map((a,i)=>`<div class="panel"><div class="row spread"><h4>${a[0]}</h4>${t.signed[i]?pill('Signed','ok'):pill('Needs signature','warn')}</div><p class="muted">${a[1]}</p>
    ${t.signed[i]?`<small class="muted">Signed ${esc(t.signed[i])}. Copy emailed to you.</small>`:`${chk('tp-r'+i,`c.tp.read.${i}`,'I have read this agreement.')}<div><button type="button" class="btn sm primary" data-act="cSign" data-v="${i}" ${t.read[i]&&t.name.trim().length>=3?'':'disabled'}>Sign</button></div>`}</div>`).join('')}</div>
   <button type="button" class="btn primary" ${n===4?'':'disabled'} data-act="cStartBuild">Start build</button>`}
+function cDirect(){
+  const d=S.c.dr,e=d.errs;
+  if(d.sent)return `${mh('Request received','We will reply within 5 working days.')}${note('Reference BLD-REQ-0019',`${esc(d.need)} for ${esc(S.c.ap.title)}. We will recommend the right consultation and send a fixed-scope quote once your Product Brief is ready.`,'ok')}<div class="row"><button type="button" class="btn primary" data-goto="creator:1">Book a consultation</button><button type="button" class="btn" data-act="cDrReset">Edit request</button></div>`;
+  return `${mh('Build your product','Want your idea developed without competing for the Top 3? The Foundry product team can build it for you on a scope, price and plan that you approve first.')}
+  <div class="grid2"><div class="panel"><h3>How it works</h3><ol class="muted" style="display:grid;gap:8px;padding-left:20px;margin:6px 0 0">
+   <li><b>Consultation.</b> Optional, with the price shown when you choose one. A Blueprint Session gives you a written Product Brief.</li>
+   <li><b>Quote.</b> A fixed scope, milestones, team and price. Nothing starts until you agree.</li>
+   <li><b>Build agreement.</b> Scope, price, payment schedule and ownership are set out and signed.</li>
+   <li><b>Build in milestones.</b> You review and approve each one before the next.</li>
+   <li><b>Launch.</b> Go live, pilot with customers, or keep building.</li></ol>
+   ${note('Separate from selection','Paying for a build does not affect the Top 3, and applying to the Top 3 does not commit you to a paid build.')}</div>
+  <div class="panel"><div class="lab">Start a build request</div>
+   ${sel('dr-need','What do you want built?','c.dr.need',['A clickable prototype','A first working version (MVP)','A full product'],{blank:'Choose one',err:e.need})}
+   ${sel('dr-stage','Where is your idea today?','c.dr.stage',['Idea only','Prototype','Working MVP'],{blank:'Choose one',err:e.stage})}
+   ${field('dr-sum','Describe what it should do','c.dr.summary',{area:true,rows:3,err:e.summary,hint:'At least 20 characters.'})}
+   ${sel('dr-con','Have you had a consultation?','c.dr.consult',['Not yet, I would like one','Yes, I have a Product Brief'],{blank:'Choose one',err:e.consult})}
+   ${chk('dr-ack','c.dr.ack','I understand this is a paid service, separate from the Top 3 competition.',e.ack)}
+   <button type="button" class="btn primary" data-act="cDrSend">Send build request</button></div></div>`}
 function cBuild(){
   const b=S.c.bd;
   const tabs=[['ms','Milestones'],['bu','Budget'],['te','Team'],['ev','Evidence']];
@@ -964,21 +1150,21 @@ function pDelib(){
   <div><button type="button" class="btn primary" data-act="pDlRec" ${d.sel.length===3&&d.why.trim().length>=30&&d.conf?'':'disabled'}>Record decision</button></div></div>`}
 
 /* ============ 64 SPONSOR SCREENS ============ */
-const TIERS=[['Ecosystem Partner','Funding, visibility support, resources','Largest logo on the sponsor wall, thanks at events, cohort report, first view of finalists','Product equity, any say in selection'],['Vetting Partner','Experts, mentors, market insight','Named expert role, early insight into emerging ideas, talent visibility','Right to select finalists'],['Build Partner','Capital, tools, technical resources','Named link to a product build, progress reports, early look at the first version','Automatic ownership of the product'],['Investment Partner','Product capital, after diligence','Diligence pack and the right to be considered under standard templates','Guaranteed deal or returns'],['Commercial Partner','Pilots, customers, distribution','First-partner positioning, early access, real market feedback','Exclusivity unless agreed']];
+const TIERS=[['Ecosystem Partner','Funding, visibility support, resources','Largest logo on the sponsor wall, thanks at events, cohort report, first view of finalists. May also agree a stake in the Foundry itself, in a separate agreement','A stake in any product, or any say in selection'],['Vetting Partner','Experts, mentors, market insight','Named expert role, early insight into emerging ideas, talent visibility','A stake in any product, or the right to select finalists'],['Build Partner','Capital, tools, technical resources','Named link to a product build, progress reports, early look at the first version, and a stake in the product they help build, sized to the value contributed and agreed in writing','Automatic ownership of the product'],['Investment Partner','Product capital, after diligence','A diligence pack, the right to be considered under standard templates, and a priced stake if a deal is agreed','Guaranteed deal or returns'],['Commercial Partner','Pilots, customers, distribution','First-partner positioning, early access and real market feedback. A small performance-linked option may be agreed','Exclusivity unless agreed']];
 function sTier(){
   const t=S.s.t,e=t.errs,x=TIERS[t.sel];
   if(t.sent)return `${mh('Enquiry received','We will review it within 5 working days.')}${note('Reference SP-ENQ-0012',`${esc(TIERS[t.sel][0])} for ${esc(t.org)}. ${t.sel===3?'Investment enquiries go to legal review before terms are sent.':'We will send the sponsor agreement next.'}`,'ok')}<div class="row"><button type="button" class="btn primary" data-goto="sponsor:1">Open agreement</button><button type="button" class="btn" data-act="sTReset">Reset</button></div>`;
-  return `${mh('Choose how to take part','Each tier has a clear role. Sponsorship supports the programme and does not buy selection or ownership.')}
+  return `${mh('Choose how to take part','Each tier has a clear role. Sponsorship does not buy selection. Any stake in a product is agreed separately in writing, after selection.')}
   <div class="grid2" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">${TIERS.map((k,i)=>`<button type="button" class="opt" aria-pressed="${t.sel===i}" data-set="s.t.sel" data-v="${i}"><h4>${k[0]}</h4><p>${k[1]}</p></button>`).join('')}</div>
   <div class="grid2"><div class="panel"><h3>${x[0]}</h3><dl class="kv"><dt>You give</dt><dd>${x[1]}</dd><dt>You get</dt><dd>${x[2]}</dd><dt>Not included</dt><dd>${x[3]}</dd></dl>${t.sel===3?note('Legal review','Investment activity may be regulated. We take legal advice before sending any terms.','warn'):''}</div>
   <div class="panel">${field('st-org','Organisation','s.t.org')}${field('st-ct','Contact name','s.t.contact')}${field('st-in','What would you like to contribute?','s.t.intent',{area:true,rows:3,err:e.intent,hint:'At least 20 characters.'})}${sel('st-cf','Do you have a conflict of interest with any applicant?','s.t.conflict',['No conflicts','Possible conflicts, I will describe them'],{blank:'Choose',err:e.conflict})}<button type="button" class="btn primary" data-act="sTSubmit">Send enquiry</button></div></div>`}
 function sAgree(){
   const a=S.s.ag;
   if(a.signed)return `${mh('Agreement active','Brand use is now unlocked.')}${note('Signed',`${esc(a.name)} signed the Sponsor Agreement on ${stamp()}.`,'ok')}<div class="row"><button type="button" class="btn primary" data-goto="sponsor:2">See the pipeline</button><button type="button" class="btn" data-act="sAgReset">Reset</button></div>`;
-  return `${mh('Contribution and benefit schedule','Vetting Partner, Cohort 01.')}
+  return `${mh('Contribution and benefit schedule','Vetting Partner, Batch 1.')}
   <h3>You commit</h3>${tbl(['Item','Value','Due','Status'],[['Three expert reviewers, 6 hours each','In kind','28 Nov',pill('Planned','info')],['Event sponsorship','₦1.0m','7 Nov',pill('Invoice sent','warn')],['Market data access for finalists','In kind','1 Dec',pill('Planned','info')]])}
   <h3>You receive</h3>${tbl(['Item','Owner','Status'],[['Name on the sponsor wall at both events','Foundry','Scheduled'],['Early insight report on finalists','Foundry','Scheduled'],['Talent visibility at the Top 3 event','Foundry','Scheduled'],['Cohort impact report','Foundry','After cohort']])}
-  <div class="panel">${chk('ag-ack','s.ag.ack','I understand that sponsorship does not buy selection, ownership or exclusivity.')}${field('ag-name','Type your name to sign','s.ag.name')}<div><button type="button" class="btn primary" data-act="sSign" ${a.ack&&a.name.trim().length>=3?'':'disabled'}>Sign agreement</button></div></div>`}
+  <div class="panel">${chk('ag-ack','s.ag.ack','I understand that sponsorship does not buy selection or exclusivity, and that any stake is agreed separately in writing after selection.')}${field('ag-name','Type your name to sign','s.ag.name')}<div><button type="button" class="btn primary" data-act="sSign" ${a.ack&&a.name.trim().length>=3?'':'disabled'}>Sign agreement</button></div></div>`}
 const PIPE=[['Idea 07','Health','Gate 3 vetting','Strong','Build and investment'],['Idea 14','Community','Gate 3 vetting','Promising','Build'],['Idea 21','Education','Gate 3 vetting','Promising','Commercial pilots'],['Idea 26','Trade','Gate 2 pitched','Early','Commercial'],['Idea 33','Agriculture','Gate 3 vetting','Strong','Investment'],['Idea 41','Fintech','Gate 2 pitched','Early','Build']];
 function sPipe(){
   const p=S.s.pp,sec=['All','Health','Community','Education','Trade','Agriculture','Fintech'],list=PIPE.filter(x=>p.sector==='All'||x[1]===p.sector);
@@ -1024,7 +1210,7 @@ function oCohort(){
   ${er.length?`<div class="note bad" role="alert"><div><b>Fix before publishing</b><ul style="margin:4px 0 0;padding-left:18px">${er.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`:note('Dates look good','Order is valid.','ok')}
   ${c.pub?`<div class="panel flat"><div class="lbl">Public call page</div><h3>${esc(c.name)} is open</h3><p class="muted">Apply by ${esc(c.close)}. ${esc(c.open)}. Categories: ${c.cats.join(', ')}.</p>${pill('Published','ok')}</div>`:`<div><button type="button" class="btn primary" data-act="oPublish" ${er.length||!c.cats.length?'disabled':''}>Publish the idea call</button></div>`}`}
 const BAD=/guarantee|winner|you will win|funding promised|we will fund|we will own|get rich|sure to/i;
-const TPL=['Do you have an idea that could solve a real problem in our community? Apply to Cohort 01 of THE FOUNDRY. Ideas are scored on evidence, and your idea stays yours.','No business plan needed. If you have a problem worth solving, tell us about it. Applications for Cohort 01 close on 7 November.','Winners get guaranteed funding! Apply now and we will own the best ideas.'];
+const TPL=['Do you have an idea that could solve a real problem in our community? Apply to Batch 1 of THE FOUNDRY. Ideas are scored on evidence, and you keep control of your idea.','No business plan needed. If you have a problem worth solving, tell us about it. Applications for Batch 1 close on 7 November.','Winners get guaranteed funding! Apply now and we will own the best ideas.'];
 function oMob(){
   const m=S.o.mb,bad=BAD.test(m.msg),pct=m.signups/m.target*100;
   return `${mh('Reach your community','Share the invite and track sign-ups.')}
@@ -1036,7 +1222,7 @@ function oMob(){
    <div class="row"><button type="button" class="btn primary" id="mb-send" data-act="oSend" ${bad?'disabled':''}>Approve and share</button><small class="muted">Only people who opted in are messaged through the platform.</small></div></div>`}
 function oDash(){
   const F=[['Applications',96],['Passed screening',71],['Pitched',24],['Finalists',8],['Top 3',3]],C=[['Health',24],['Community',21],['Education',19],['Agriculture',12],['Fintech',10],['Other',10]];
-  return `${mh('Cohort 01 dashboard','Aggregates only.')}
+  return `${mh('Batch 1 dashboard','Aggregates only.')}
   <div class="grid2"><div class="panel"><h3>Funnel</h3><div class="fun">${F.map(f=>`<div class="fr"><span>${f[0]}</span><div class="bar e"><i style="width:${f[1]/96*100}%"></i></div><b>${f[1]}</b></div>`).join('')}</div></div>
   <div class="panel"><h3>Applications by category</h3><div class="fun">${C.map(f=>`<div class="fr"><span>${f[0]}</span><div class="bar"><i style="width:${f[1]/24*100}%"></i></div><b>${f[1]}</b></div>`).join('')}</div></div></div>
   ${note('12 applications are incomplete','They close on 7 November. Send a reminder.','warn')}
@@ -1126,12 +1312,14 @@ const heroArt=()=>`<svg class="art" viewBox="0 0 640 560" role="img" aria-labell
 
 const FAQ=[
  ['Do I need a business plan or technical skills?','No. You need to explain the problem, who has it and your idea. Experts, a product team and the platform help with the rest.'],
- ['Does it cost anything to apply?','There is no entry fee for the competitive pathway. Optional services such as a readiness consultation are priced before you book, and paying for them never affects any selection decision.'],
- ['Who owns my idea?','You do. Submitting is an application, not a transfer of ownership. Any equity, revenue share or licence needs a separate agreement that you sign.'],
+ ['Does it cost anything to apply?','There is no entry fee for the Top 3 pathway. Consultations are optional. You see the price only once you choose one, and booking never affects selection. Building your product directly is a separate service, quoted to scope.'],
+ ['Can I get my idea built without the Top 3?','Yes. Book a consultation, get a written Product Brief and a fixed-scope quote, then sign a build agreement. It is separate from the competition: paying for a build does not affect selection, and entering the Top 3 does not commit you to a build.'],
+ ['Who owns my idea?','You keep control of it. Submitting is an application, not a transfer of ownership, and nothing is asked of you at application. If your idea is selected for the build pathway, the Foundry, the product team or partners may take a stake in the product company. Any stake is explained before you sign, agreed in writing, and never a condition of applying.'],
+ ['Does the Foundry take equity?','Not at application, and not from ideas that are not selected. For the three ideas we back, the Foundry may take a stake in the product company in return for vetting, team assembly and support. You see the terms before you sign, you decide whether to sign, and you keep control.'],
  ['How are ideas chosen?','On a weighted scorecard covering problem strength, users and market, innovation, feasibility, commercial potential, impact, scalability and founder commitment. Experts and sponsors challenge the shortlist between the two events, and an independent panel decides.'],
  ['Does being selected guarantee funding?','No. The Top 3 enter a scoped, budgeted build pathway. Budgets are agreed in writing before spending starts and are funded by sponsors, investors or programme funds. Selection does not promise investment, customers or any other outcome.'],
- ['What if my idea is not selected?','You get structured feedback, an invitation to apply in the next cohort and a consultation if you want one. You keep full ownership of your idea.'],
- ['Can our organisation run a cohort?','Yes. A partner organisation signs an agreement, sets the cohort dates and mobilises its community. Partners get an aggregate dashboard. They do not own Top 3 products or decide who is selected.'],
+ ['What if my idea is not selected?','You get structured feedback, an invitation to apply in the next cohort, and the option to book a consultation or commission your own build. You keep full ownership of your idea.'],
+ ['Can our organisation run a cohort?','Yes. A partner organisation signs an agreement, sets the cohort dates and mobilises its community. Partners get an aggregate dashboard. They do not own Top 3 products by default, and they do not decide who is selected.'],
  ['Can a sponsor pay to get its preferred idea chosen?','No. Money does not buy a finalist position. Sponsors disclose conflicts, and sponsor logos never appear on scoring materials.']];
 
 /* ============ ILLUSTRATION LIBRARY ============ */
@@ -1285,24 +1473,55 @@ const SPOT={
 const spot=k=>`<svg class="spot" viewBox="0 0 200 130" aria-hidden="true">${SPOT[k]}</svg>`;
 
 /* Scene 1: a bridge over the gap between an idea and a product */
-const sceneGap=()=>`<svg viewBox="0 0 600 400" role="img" aria-label="A creator with an idea on one cliff, customers and a product on the other, and a bridge of team, evidence and route to market between them" xmlns="http://www.w3.org/2000/svg">
-<defs><linearGradient id="sg-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCE3CC"/><stop offset="1" stop-color="#F7F0EA"/></linearGradient><linearGradient id="sg-w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FA3A9"/><stop offset="1" stop-color="#2B6E73"/></linearGradient></defs>
-<rect width="600" height="400" fill="url(#sg-sky)"/><circle cx="478" cy="86" r="42" fill="#F5C86A"/><circle cx="478" cy="86" r="62" fill="#F5C86A" opacity=".25"/>
-<g fill="#fff" opacity=".85"><ellipse cx="130" cy="70" rx="42" ry="14"/><ellipse cx="160" cy="60" rx="26" ry="14"/><ellipse cx="330" cy="46" rx="36" ry="11"/><ellipse cx="352" cy="38" rx="20" ry="10"/></g>
-<rect x="190" y="318" width="220" height="82" fill="url(#sg-w)"/><path d="M190 332q14 -9 28 0t28 0 28 0 28 0 28 0 28 0 28 0 28 0" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/>
-${person(78,262,1.15,{skin:SKIN[2],hair:HAIR[1],style:'afro',top:'#C2511F'})}
-<path d="M0 262H214L200 400H0Z" fill="#8A5A3B"/><path d="M0 262H214V280H0Z" fill="#6FA37A"/>
-<path d="M386 262H600V400H400Z" fill="#8A5A3B"/><path d="M386 262H600V280H386Z" fill="#6FA37A"/>
-<g transform="translate(142 168)"><circle r="30" fill="#fff" opacity=".6"/><circle cx="0" cy="-4" r="15" fill="#E5A430"/><rect x="-7" y="9" width="14" height="8" rx="2" fill="#9AA1A9"/><g stroke="#E5A430" stroke-width="3" stroke-linecap="round"><path d="M0 -30v-6M-23 -17l-4 -4M23 -17l4 -4"/></g></g>
-<g transform="rotate(-8 40 200)"><rect x="18" y="186" width="58" height="34" rx="7" fill="#fff" stroke="#DDD5CC"/><rect x="26" y="194" width="30" height="5" rx="2.5" fill="#C2511F"/><rect x="26" y="204" width="40" height="5" rx="2.5" fill="#E6DED4"/></g>
-<g><rect x="240" y="274" width="14" height="60" fill="#C2511F"/><rect x="293" y="274" width="14" height="60" fill="#E5A430"/><rect x="346" y="274" width="14" height="60" fill="#2D4A6F"/></g>
-<g>${Array.from({length:10},(_,i)=>`<rect x="${203+i*19.5}" y="256" width="17" height="14" rx="3" fill="${i%2?'#E5A430':'#F5C86A'}" stroke="#8A5A00" stroke-opacity=".35"/>`).join('')}</g>
-<path d="M205 256V232M395 256V232" stroke="#8A5A00" stroke-width="4"/><path d="M205 234Q300 262 395 234" stroke="#8A5A00" stroke-width="3" fill="none"/>
-<g font-family="Poppins,Arial" font-weight="600" font-size="12" text-anchor="middle"><g transform="translate(247 214)"><rect x="-34" y="-14" width="68" height="24" rx="12" fill="#C2511F"/><text y="3" fill="#fff">Team</text></g><g transform="translate(300 192)"><rect x="-40" y="-14" width="80" height="24" rx="12" fill="#E5A430"/><text y="3" fill="#22272E">Evidence</text></g><g transform="translate(353 214)"><rect x="-34" y="-14" width="68" height="24" rx="12" fill="#2D4A6F"/><text y="3" fill="#fff">Market</text></g></g>
-<rect x="436" y="190" width="112" height="72" fill="#F7F0EA" stroke="#DDD5CC" stroke-width="2"/><path d="M430 190h124l-10 -28H440z" fill="#C2511F"/><g fill="#F7F0EA">${[0,1,2,3,4,5].map(i=>`<path d="M${440+i*18} 162h9l-3 28h-9z" opacity=".9"/>`).join('')}</g><rect x="452" y="212" width="32" height="50" fill="#2B6E73"/><rect x="496" y="208" width="40" height="30" rx="3" fill="#9FB2CF"/>
-<g transform="translate(556 232)"><rect x="-22" y="-52" width="44" height="76" rx="9" fill="#22272E"/><rect x="-18" y="-46" width="36" height="64" rx="5" fill="#2B6E73"/><text y="-12" text-anchor="middle" font-family="Poppins,Arial" font-weight="700" font-size="13" fill="#fff">SFM</text>${sp4(0,-32,6,'#E5A430')}</g>
-${person(510,263,.62,{skin:SKIN[1],hair:HAIR[0],style:'wrap',top:'#2D4A6F',acc:'#E5732F'})}${person(466,264,.55,{skin:SKIN[0],hair:HAIR[2],style:'short',top:'#C2511F'})}
-<path d="M0 262H214V280H0Z M386 262H600V280H386Z" fill="#6FA37A"/>${sp4(240,120,7,'#E5A430',.9)}${sp4(560,140,6,'#F08A5D')}</svg>`;
+const sceneGap=()=>{
+const pill=(x,y,w,c,tc,ico,t)=>`<g transform="translate(${x} ${y})" class="gp-bob"><path d="M0 14V26" stroke="${c}" stroke-width="2" stroke-dasharray="2 3"/><rect x="${-w/2}" y="-15" width="${w}" height="30" rx="15" fill="${c}" stroke="#fff" stroke-width="2"/><circle cx="${-w/2+15}" cy="0" r="11" fill="#fff" opacity=".95"/><g transform="translate(${-w/2+8.5} -6.5) scale(.55)" fill="none" stroke="${c}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">${IC[ico]}</g><text x="${-w/2+30+(w-30)/2-6}" y="4" text-anchor="middle" font-family="Poppins,Arial" font-weight="600" font-size="12" fill="${tc}">${t}</text></g>`;
+const tree=(x,y,s,c)=>`<g transform="translate(${x} ${y}) scale(${s})"><rect x="-2" y="-10" width="4" height="12" fill="#6B4328"/><path d="M0 -44L-14 -8H14Z" fill="${c}"/><path d="M0 -58L-11 -28H11Z" fill="${mixc(c,'#ffffff',.14)}"/></g>`;
+const bird=(x,y,s,d)=>`<path class="gp-bird" style="animation-delay:${d}s" transform="translate(${x} ${y}) scale(${s})" d="M-8 0Q-4 -6 0 0Q4 -6 8 0" fill="none" stroke="#7A5A48" stroke-width="1.6" stroke-linecap="round"/>`;
+return `<svg viewBox="0 0 600 400" role="img" aria-label="A creator with an idea on one cliff, customers and a finished product on the other, and a bridge of team, evidence and route to market between them" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="sg-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBD9B8"/><stop offset=".55" stop-color="#FDEBDA"/><stop offset="1" stop-color="#F7F0EA"/></linearGradient>
+<linearGradient id="sg-w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6DB6BB"/><stop offset="1" stop-color="#1F5559"/></linearGradient>
+<linearGradient id="sg-cn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B58563"/><stop offset="1" stop-color="#5E3F2B"/></linearGradient>
+<linearGradient id="sg-cl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9744F"/><stop offset="1" stop-color="#6B4328"/></linearGradient>
+<radialGradient id="sg-sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFE7A8"/><stop offset=".55" stop-color="#F5C86A" stop-opacity=".55"/><stop offset="1" stop-color="#F5C86A" stop-opacity="0"/></radialGradient>
+<radialGradient id="sg-glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFE08A" stop-opacity=".95"/><stop offset="1" stop-color="#FFE08A" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="600" height="400" fill="url(#sg-sky)"/>
+<circle cx="300" cy="96" r="120" fill="url(#sg-sun)"/><circle cx="300" cy="96" r="38" fill="#F9D27A"/>
+<g fill="#fff" opacity=".9"><ellipse cx="96" cy="62" rx="40" ry="12"/><ellipse cx="122" cy="52" rx="24" ry="12"/><ellipse cx="500" cy="52" rx="38" ry="11"/><ellipse cx="520" cy="44" rx="20" ry="10"/><ellipse cx="410" cy="116" rx="26" ry="8" opacity=".7"/></g>
+${bird(200,70,1,0)}${bird(222,86,.75,.4)}${bird(386,66,.9,.8)}
+<path d="M0 232L70 186L130 220L210 168L290 226L370 176L450 222L520 180L600 220V300H0Z" fill="#E8C7AB" opacity=".75"/>
+<path d="M0 252L80 214L160 246L250 206L330 250L420 208L510 246L600 214V320H0Z" fill="#9CC7C2" opacity=".7"/>
+<rect x="196" y="262" width="208" height="138" fill="url(#sg-cn)"/>
+<path d="M196 262L212 400H196ZM404 262L388 400H404Z" fill="#3E2818" opacity=".35"/>
+<g fill="#fff" opacity=".35"><ellipse cx="300" cy="318" rx="110" ry="14"/><ellipse cx="270" cy="338" rx="70" ry="9"/></g>
+<rect x="196" y="352" width="208" height="48" fill="url(#sg-w)"/><path d="M196 364q13 -8 26 0t26 0 26 0 26 0 26 0 26 0 26 0 26 0" stroke="#fff" stroke-opacity=".5" stroke-width="2.5" fill="none"/>
+<g><rect x="244" y="270" width="16" height="84" fill="#C2511F"/><rect x="292" y="270" width="16" height="84" fill="#E5A430"/><rect x="340" y="270" width="16" height="84" fill="#2D4A6F"/></g>
+<g stroke="#000" stroke-opacity=".12" stroke-width="2">${[290,310,330].map(y=>`<path d="M244 ${y}h16M292 ${y}h16M340 ${y}h16"/>`).join('')}</g>
+<path d="M0 262H212L198 400H0Z" fill="url(#sg-cl)"/>
+<path d="M0 296H206M0 332H202M0 366H199" stroke="#4A2F1D" stroke-opacity=".28" stroke-width="3"/><path d="M0 280H208M0 316H204M0 350H200" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>
+<path d="M388 262H600V400H402Z" fill="url(#sg-cl)"/>
+<path d="M394 296H600M398 332H600M401 366H600" stroke="#4A2F1D" stroke-opacity=".28" stroke-width="3"/><path d="M392 280H600M396 316H600M400 350H600" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>
+<path d="M0 262H214V282H0Z M386 262H600V282H386Z" fill="#6FA37A"/><path d="M0 262H214V268H0Z M386 262H600V268H386Z" fill="#8CC28F"/>
+${tree(24,264,.9,'#3E7F55')}${tree(176,264,.7,'#4C9163')}${tree(572,264,.9,'#3E7F55')}
+<g>${Array.from({length:11},(_,i)=>`<rect x="${196+i*19}" y="254" width="17" height="14" rx="3" fill="${i%2?'#E5A430':'#F5C86A'}" stroke="#8A5A00" stroke-opacity=".4"/>`).join('')}</g>
+<path d="M196 268H404" stroke="#8A5A00" stroke-width="3"/>
+<path d="M205 254V200M395 254V200" stroke="#8A5A00" stroke-width="6" stroke-linecap="round"/><circle cx="205" cy="198" r="6" fill="#E5A430" stroke="#8A5A00" stroke-width="2"/><circle cx="395" cy="198" r="6" fill="#E5A430" stroke="#8A5A00" stroke-width="2"/>
+${Array.from({length:13},(_,i)=>{const t=i/12,x=205+190*t,y=200+54*(1-Math.pow(2*t-1,2))*0.72;return `<path d="M${x.toFixed(1)} ${y.toFixed(1)}V254" stroke="#8A5A00" stroke-width="1.5" opacity=".8"/>`}).join('')}
+<path d="M205 200Q300 281 395 200" stroke="#8A5A00" stroke-width="3.5" fill="none"/>
+<path class="gp-dash" d="M120 250Q300 232 470 248" stroke="#C2511F" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-dasharray="1 9"/>
+${pill(250,172,98,'#C2511F','#fff','team','Team')}${pill(300,132,112,'#B87A12','#fff','search','Evidence')}${pill(350,172,98,'#2D4A6F','#fff','route','Market')}
+<g transform="translate(142 148)" class="gp-float"><circle r="62" fill="url(#sg-glow)"/><circle r="26" fill="#fff" opacity=".7"/><path d="M0 -20a14 14 0 0 1 8 25.5V14H-8V5.5A14 14 0 0 1 0 -20Z" fill="#F5B83A" stroke="#C2831A" stroke-width="2"/><rect x="-8" y="14" width="16" height="4" rx="2" fill="#9AA1A9"/><rect x="-5" y="19" width="10" height="4" rx="2" fill="#7E858C"/><path d="M-4 3V-6M4 3V-6M-4 -6Q0 -2 4 -6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/><g stroke="#F5B83A" stroke-width="3" stroke-linecap="round"><path d="M0 -36v-8M-26 -26l-6 -6M26 -26l6 -6M-34 -2h-8M34 -2h8"/></g></g>
+<g fill="#fff" stroke="#E6DED4"><circle cx="112" cy="196" r="4"/><circle cx="104" cy="210" r="2.6"/></g>
+${person(78,264,1.15,{skin:SKIN[2],hair:HAIR[1],style:'afro',top:'#C2511F'})}
+<g transform="rotate(-7 34 214)"><rect x="12" y="198" width="56" height="34" rx="7" fill="#fff" stroke="#DDD5CC"/><rect x="20" y="206" width="28" height="5" rx="2.5" fill="#C2511F"/><rect x="20" y="216" width="38" height="5" rx="2.5" fill="#E6DED4"/></g>
+<g transform="translate(486 128)"><rect x="-54" y="-38" width="108" height="76" rx="14" fill="#fff" stroke="#DDD5CC" stroke-width="2"/><rect x="-42" y="-26" width="84" height="8" rx="4" fill="#E6DED4"/><rect x="-42" y="-26" width="46" height="8" rx="4" fill="#2B6E73"/><g>${[16,28,38,52].map((h,i)=>`<rect class="gp-bar" style="animation-delay:${i*.15}s" x="${-38+i*21}" y="${30-h}" width="14" height="${h}" rx="3" fill="${['#9CC7C2','#6DB6BB','#2B6E73','#C2511F'][i]}"/>`).join('')}</g></g>
+<rect x="430" y="196" width="130" height="70" fill="#FBF6F0" stroke="#DDD5CC" stroke-width="2"/><path d="M424 196h142l-12 -30H436z" fill="#C2511F"/><g>${[0,1,2,3,4,5,6].map(i=>`<path d="M${436+i*19} 166h10l-3 30h-10z" fill="${i%2?'#FBF6F0':'#F3B38A'}"/>`).join('')}</g>
+<rect x="446" y="216" width="34" height="50" rx="2" fill="#2B6E73"/><circle cx="474" cy="242" r="2" fill="#F5C86A"/><rect x="494" y="212" width="52" height="34" rx="4" fill="#BFD4E8" stroke="#9FB2CF"/><path d="M494 229H546M520 212V246" stroke="#fff" stroke-width="2" opacity=".8"/>
+<g transform="translate(578 236)"><rect x="-17" y="-46" width="34" height="62" rx="8" fill="#22272E"/><rect x="-14" y="-41" width="28" height="52" rx="5" fill="#2B6E73"/><text y="-14" text-anchor="middle" font-family="Poppins,Arial" font-weight="700" font-size="10" fill="#fff">SFM</text>${sp4(0,-28,5,'#F5C86A')}</g>
+${person(512,266,.6,{skin:SKIN[1],hair:HAIR[0],style:'wrap',top:'#2D4A6F',acc:'#E5732F'})}${person(470,267,.54,{skin:SKIN[0],hair:HAIR[2],style:'short',top:'#2B6E73'})}${person(430,268,.5,{skin:SKIN[3],hair:HAIR[3],style:'short',top:'#8A5A00'})}
+<path d="M0 262H214V268H0Z M386 262H600V268H386Z" fill="#8CC28F"/>
+<g class="gp-tw">${sp4(228,118,7,'#E5A430',.9)}${sp4(402,86,6,'#F08A5D')}${sp4(560,72,5,'#E5A430',.8)}${sp4(40,120,5,'#F08A5D',.8)}</g></svg>`};
 
 /* Scene 2: Pitch Night */
 const sceneStage=()=>{
@@ -1317,7 +1536,7 @@ const sceneStage=()=>{
 <path d="M0 22Q600 70 1200 22" stroke="#4A525E" stroke-width="2" fill="none"/>${lights}
 <rect x="400" y="86" width="400" height="170" rx="14" fill="#12161B" stroke="#4A525E" stroke-width="3"/><rect x="410" y="96" width="380" height="150" rx="8" fill="#22272E"/>
 <g transform="translate(470 111) scale(.12)" fill="#F7F0EA"><rect x="170" y="120" width="230" height="760" rx="26"/><rect x="170" y="120" width="490" height="210" rx="26"/><rect x="170" y="440" width="390" height="200" rx="26"/><polygon fill="#E5A430" points="790,107 820,195 908,225 820,255 790,343 760,255 672,225 760,195"/></g>
-<text x="600" y="162" font-family="Poppins,Arial" font-weight="700" font-size="30" fill="#F7F0EA" letter-spacing="3">PITCH NIGHT</text><text x="600" y="192" font-family="Poppins,Arial" font-weight="500" font-size="15" fill="#E5A430" letter-spacing="2">COHORT 01</text><rect x="600" y="206" width="150" height="6" rx="3" fill="#C2511F"/>
+<text x="600" y="162" font-family="Poppins,Arial" font-weight="700" font-size="30" fill="#F7F0EA" letter-spacing="3">PITCH NIGHT</text><text x="600" y="192" font-family="Poppins,Arial" font-weight="500" font-size="15" fill="#E5A430" letter-spacing="2">BATCH 1</text><rect x="600" y="206" width="150" height="6" rx="3" fill="#C2511F"/>
 <rect x="150" y="300" width="900" height="26" rx="6" fill="#3A424D"/><rect x="150" y="326" width="900" height="8" fill="#2B323B"/>
 ${person(300,300,1.2,{skin:SKIN[2],hair:HAIR[1],style:'afro',top:'#C2511F'})}
 <rect x="338" y="236" width="76" height="64" rx="4" fill="#E5A430"/><rect x="338" y="236" width="76" height="9" fill="#C2511F"/><path d="M376 190v46" stroke="#9AA1A9" stroke-width="3"/><circle cx="376" cy="186" r="7" fill="#22272E" stroke="#9AA1A9" stroke-width="2"/>
@@ -1358,84 +1577,103 @@ function viewHome(){
   const sc=(t,id,cls='')=>`<button type="button" class="btn ${cls}" data-act="scrollTo" data-v="${id}">${t}</button>`;
   const head=(eb,h,p,c='')=>`<div class="head ${c}"><span class="eb">${eb}</span><h2>${h}</h2>${p?`<p>${p}</p>`:''}</div>`;
   const steps=[
-   ['apply','Oct to early Nov 2026','Apply','Share the problem, who has it and your idea. Take an optional readiness consultation first. No business plan needed.','Amara describes her surplus-food idea in five short steps.'],
+   ['apply','Oct to early Nov 2026','Apply','Share the problem, who has it and your idea. You can start with an optional consultation. No business plan needed.','She describes her surplus-food idea in five short steps.'],
    ['pitch','Nov 2026','Pitch Night','Present to the panel and the community. You are scored on a transparent eight-criterion scorecard.','She pitches for seven minutes and gets scored feedback.'],
-   ['vet','Late Nov to Dec','Expert and sponsor vetting','Specialists challenge your evidence, market and plan. You answer through the platform.','Three experts ask who will pay. She goes out and finds evidence.'],
-   ['top3','Dec 2026','Top 3 selection','Finalists present again. The panel deliberates and records the three ideas that move to build.','The panel records its decision. Her idea is in the Top 3.'],
+   ['vet','Late Nov to Dec','Expert and sponsor vetting','Specialists challenge your evidence, market and plan. You answer through the platform.','Three experts ask who will pay, so she goes out and finds evidence.'],
+   ['top3','Dec 2026','Top 3 selection','Finalists present again. The panel deliberates and records the three ideas that move to build.','The panel records its decision, and her idea is in the Top 3.'],
    ['build','After selection','Build with a team','Discovery, design and a first working version, under an approved budget with clear milestones.','A designer, analyst and developer join her under a signed plan.'],
-   ['launch','After validation','Launch and grow','Pilots, customers, investment, licensing or launch, based on the evidence you have gathered.','Two pilots later, the app is ready for real customers.']];
-  const dates=[['7','Nov','Applications close'],['21','Nov','Product Pitch Night'],['23','Nov','Expert and sponsor vetting begins'],['12','Dec','Top 3 selection event']];
+   ['launch','After validation','Launch and grow','Pilots, first customers, investment or licensing, guided by the evidence you have gathered.','Two pilots later, the app is ready for real customers.']];
+  const dates=[['7','Nov','Applications close'],['21','Nov','Pitch Night'],['23','Nov','Expert and sponsor vetting begins'],['12','Dec','Top 3 selection event']];
   const roles=[
-   ['creator','var(--btn)','Creators','Have an idea? Bring it.','Turn a real problem into a tested product with people who build.',['Honest, evidence-based feedback','A scoped, budgeted build for the Top 3','Your idea stays yours'],'Creator journey','creator:0'],
+   ['creator','var(--btn)','Creators','Have an idea? Bring it.','Turn a real problem into a tested product with people who build.',['Honest, evidence-based feedback','A scoped, budgeted build for the Top 3','You keep control of your idea'],'Creator journey','creator:0'],
    ['partner','var(--teal)','Partner organisations','Run a cohort for your community.','A structured pipeline of ideas from the people you already serve.',['Independent, credible selection','Ready-made agreements and tools','A cohort dashboard and report'],'Partner journey','partner:0'],
    ['sponsor','var(--gold)','Sponsors and investors','Back real products, not logos.','Curated access to emerging products, founders and problems that matter.',['A consent-based pipeline','Roles in vetting, building and market access','Funds released against evidence'],'Sponsor journey','sponsor:0'],
    ['panelist','var(--blue)','Panelists and experts','Help decide what gets built.','Bring your judgement to a fair, structured process.',['Clear criteria and conflict rules','Score from any device, even live','Signed NDA and recorded decisions'],'Panelist journey','panelist:0']];
   const cmp=[['Main purpose','Reward the best pitch','Grow early companies in exchange for equity','Turn ideas into validated products'],
    ['How ideas are chosen','Pitch and judge opinion','Team, traction and market','Evidence scorecard plus expert and sponsor vetting'],
    ['After selection','A prize, then support usually ends','Mentoring and a demo day','A scoped build with a real team'],
-   ['Who owns the idea','Usually the creator','The accelerator takes equity from every company','The creator. Any participation is agreed separately in writing'],
+   ['When a stake is asked for','Usually none','At admission, from every company','Never at application. Only for the Top 3, after selection, in a written agreement'],
+   ['Who stays in control','Usually the creator','Varies by programme','The creator. Any stake for the Foundry or partners is agreed separately in writing'],
    ['What sponsors get','Logo and visibility','Funding, mentors and perks','Roles in vetting, building, investing and market access'],
    ['Repeatable across communities','One-off event','Annual cohorts','One system, many partner communities']];
   const tierIc=['heart','search','build','chart','store'],tierCl=['#C2511F','#2D4A6F','#2B6E73','#8A5A00','#8A2F0E'];
-  const trust=[['shield','Your idea stays yours','Submitting is an application, not a transfer of ownership.'],['scale','Money does not buy selection','Sponsors and partners cannot buy a finalist place or see scoring materials.'],['eye','Conflicts are declared','Panelists, sponsors and partners disclose conflicts and step back from decisions.'],['log','Every decision is recorded','Scores, decisions and signatures are time-stamped in an audit log.']];
+  const trust=[['shield','You stay in control','Submitting is an application, not a transfer of ownership. Any stake in a selected product is agreed in writing, after selection.'],['scale','Money does not buy selection','Sponsors and partners cannot buy a finalist place or see scoring materials.'],['eye','Conflicts are declared','Panelists, sponsors and partners disclose conflicts and step back from decisions.'],['log','Every decision is recorded','Scores, decisions and signatures are time-stamped in an audit log.']];
   const cats=['Health','Education','Agriculture','Fintech','Community','Trade','Environment','Culture'],dots=['#C2511F','#2B6E73','#E5A430','#2D4A6F'];
   const tick=cats.map((c,i)=>`<span><i style="background:${dots[i%4]}"></i>${c}</span>`).join('');
   return `<section class="hero2"><div class="blob b1"></div><div class="blob b2"></div><div class="wrap">
-   <div class="copy"><span class="eyebrow"><i></i>Cohort 01 &#183; applications close 7 November 2026</span>
+   <div class="copy"><span class="eyebrow"><i></i>Batch 1 &#183; applications close 7 November 2026</span>
     <h1>Forging ideas into <em>impact</em></h1>
-    <p class="lede">THE FOUNDRY helps promising ideas from real communities get tested on evidence, built with a vetted team and connected to capital and customers. Your idea stays yours.</p>
+    <p class="lede">THE FOUNDRY helps promising ideas from real communities get tested on evidence, built with a vetted team and connected to capital and customers. You keep control of your idea.</p>
     <div class="ctas">${go('Apply with your idea','creator:0','primary lg')}${go('Partner with us','partner:0','ghost lg')}${sc('See how it works','how','ghost lg')}</div>
     <div class="proof"><span class="avs">${[0,1,2,3,4].map(i=>avatar(i)).join('')}</span><span>Built for <b>creators, partners, sponsors and panelists</b> working together</span></div></div>
    <div class="vis">${heroPic()}</div></div></section>
   <div class="ticker" aria-label="Idea categories"><div class="track">${tick}${tick}${tick}</div></div>
 
   <section class="facts" aria-label="At a glance"><div class="wrap"><div class="fgrid">
-   <div class="fact"><b>8</b><span>stage gates from application to commercial pathway</span></div>
+   <div class="fact"><b data-count="8">8</b><span>stage gates from application to commercial pathway</span></div>
    <div class="fact"><b>Top 3</b><span>ideas selected per cohort for a scoped, budgeted build</span></div>
-   <div class="fact"><b>&#8358;0</b><span>entry fee for the competitive pathway</span></div>
-   <div class="fact"><b>Yours</b><span>creators keep their ideas unless they agree otherwise in writing</span></div></div></div></section>
+   <div class="fact"><b>&#8358;0</b><span>entry fee to compete for the Top 3</span></div>
+   <div class="fact"><b>Control</b><span>Creators keep control. Any stake is agreed in writing, after selection.</span></div></div></div></section>
 
   <section class="band" id="about"><div class="wrap split">
    <div class="rv">${head('The gap','Good ideas rarely fail for lack of ambition.','They fail in the gap between idea and product. Creators often have the problem and the passion, but not the team, the evidence or the route to market.')}
-    <ul class="gapl"><li><span class="ico c1">${ic('team')}</span><div><h3>No team</h3><p>We assemble a multidisciplinary product team from a vetted network around each selected idea.</p></div></li>
-    <li><span class="ico c2">${ic('search')}</span><div><h3>No evidence</h3><p>Experts and sponsors challenge your assumptions, so selection rests on proof and not presentation.</p></div></li>
+    <ul class="gapl"><li><span class="ico c1">${ic('team')}</span><div><h3>No team</h3><p>We build a multidisciplinary product team from a vetted network around each selected idea.</p></div></li>
+    <li><span class="ico c2">${ic('search')}</span><div><h3>No evidence</h3><p>Experts and sponsors challenge your assumptions, so selection rests on proof, not presentation.</p></div></li>
     <li><span class="ico c3">${ic('route')}</span><div><h3>No route to market</h3><p>Build budgets, pilots, investors and partners connect validated products to real customers.</p></div></li></ul></div>
    <div class="rv d2">${IMG(sceneGap(),'tilt')}</div></div></section>
 
   <section class="band alt" id="how"><div class="wrap">
    ${head('How it works','From a raw idea to a real product in six steps','Early stages are open to everyone. Later stages ask for more evidence. Every decision is recorded. Follow Amara, a creator, along the way.')}
-   <ol class="steps2">${steps.map((s,i)=>`<li class="step2 rv" style="--d:${(i%3)*80}ms"><div class="sp">${spot(s[0])}<span class="n">${i+1}</span></div><span class="when">${s[1]}</span><h3>${s[2]}</h3><p>${s[3]}</p><p class="ex"><b>Amara:</b> ${s[4].replace(/^(Amara|She) /,'')}</p></li>`).join('')}</ol>
-   <div class="row" style="margin-top:26px">${go('Follow one idea through all eight gates','creator:3')}</div></div></section>
+   <ol class="steps2">${steps.map((s,i)=>`<li class="step2 rv" style="--d:${(i%3)*80}ms;--c:${['#C2511F','#2B6E73','#2D4A6F','#8A5A00','#2B6E73','#C2511F'][i]}"><div class="sp">${spot(s[0])}<span class="n">Step ${i+1}</span><span class="when">${s[1]}</span></div><div class="sb"><h3>${s[2]}</h3><p>${s[3]}</p></div><p class="ex">${avatar(0)}<span><b>Amara's story</b>${s[4]}</span></p></li>`).join('')}</ol>
+   <div class="row" style="margin-top:26px">${go('Follow one idea through all eight stage gates','creator:3')}</div></div></section>
 
   <section class="stage" id="dates"><div class="stagepic">${sceneStage()}</div><div class="wrap">
-   <div class="stagecopy rv">${head('Key dates','Cohort 01 at a glance','Each partner sets its own cohort calendar.')}</div>
-   <div class="dates">${dates.map((d,i)=>`<div class="date rv" style="--d:${i*70}ms"><span class="cal"><em>${d[1]}</em><b>${d[0]}</b></span><span class="dt">${d[2]}</span></div>`).join('')}</div>
-   <div class="ctas" style="margin-top:28px">${go('Apply before 7 November','creator:0','primary lg')}${go('Book a readiness consultation','creator:1','ghost lg')}</div></div></section>
+   <div class="stagecopy rv">${head('Key dates','Batch 1 at a glance','Each partner sets its own cohort calendar.')}</div>
+   <div class="dates">${dates.map((d,i)=>`<div class="date rv" style="--d:${i*70}ms"><span class="cal"><em>${d[1]}</em><b data-count="${d[0]}">${d[0]}</b></span><span class="dt">${d[2]}</span></div>`).join('')}</div>
+   <div class="ctas" style="margin-top:28px">${go('Apply before 7 November','creator:0','primary lg')}${go('Book a consultation','creator:1','ghost lg')}</div></div></section>
 
   <section class="band" id="who"><div class="wrap">
-   ${head('Who it is for','A place for everyone who helps an idea become a product','Open each journey to click through the screens each person would see.')}
-   <div class="roles">${roles.map((r,i)=>`<article class="role rv" style="--d:${i*70}ms">${portrait(r[0])}<div class="in"><span class="eb" style="color:${r[1]}">${r[2]}</span><h3>${r[3]}</h3><p class="muted">${r[4]}</p><ul>${r[5].map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="go">${go('Explore the '+r[6].toLowerCase()+' '+ic('arrow',18),r[7])}</div></article>`).join('')}</div></div></section>
+   ${head('Who it is for','A place for everyone who helps an idea become a product','See what each role does, from the first step to the final decision.')}
+   <article class="creatorcard rv" id="pathways">
+    <div class="cpic">${portrait('creator')}</div>
+    <div class="cbody">
+     <span class="eb" style="color:var(--btn)">Creators</span><h3>Have an idea? Bring it.</h3>
+     <p class="muted">Turn a real problem into a tested product with people who build. There are two ways in.</p>
+     <div class="paths2">
+      <div class="path2"><span class="ptag">No entry fee</span><h4>Compete for the Top 3</h4><p>Apply with your idea and be scored on evidence at Pitch Night. The three ideas selected enter a scoped, budgeted build with a vetted team.</p>
+       <ul><li>${ic('check',16)}Scored on a transparent eight-criterion scorecard, with honest, evidence-based feedback</li><li>${ic('check',16)}Expert and sponsor vetting before selection</li><li>${ic('check',16)}Any stake agreed in writing, only after selection</li><li>${ic('check',16)}You keep control of your idea</li></ul>
+       <div class="pgo">${go('Apply before 7 November '+ic('arrow',18),'creator:0','primary')}</div></div>
+      <div class="path2 hot"><span class="ptag">Paid service</span><h4>Build your product</h4><p>Want your idea developed without competing for the Top 3? The Foundry product team builds it on a scope, price and plan you approve first.</p>
+       <ul><li>${ic('check',16)}Start with an optional consultation and a written Product Brief</li><li>${ic('check',16)}Fixed scope, milestones and price before work starts</li><li>${ic('check',16)}Also open to ideas not selected for the Top 3</li></ul>
+       <div class="pgo">${go('Start a build request '+ic('arrow',18),'creator:8','light')}</div></div></div>
+     <div class="consult2"><div class="cl"><b>Start with an optional consultation</b></div>
+      <ul class="cchips">${CONS.map(c=>`<li><span>${c[0]}</span></li>`).join('')}</ul>
+      <details class="cmore"><summary>What each consultation includes</summary><ul class="cdet">${CONS.map(c=>`<li><b>${c[0]}</b><span>${c[1]}. ${c[2]}</span></li>`).join('')}</ul></details>
+      <div class="pgo">${go('Book a consultation','creator:1','dark')}</div></div>
+    </div></article>
+   <div class="roles r3">${roles.slice(1).map((r,i)=>`<article class="role rv" style="--d:${i*70}ms">${portrait(r[0])}<div class="in"><span class="eb" style="color:${r[1]}">${r[2]}</span><h3>${r[3]}</h3><p class="muted">${r[4]}</p><ul>${r[5].map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="go">${go('Explore the '+r[6].toLowerCase()+' '+ic('arrow',18),r[7])}</div></article>`).join('')}</div></div></section>
 
   <section class="band alt" id="different"><div class="wrap">
-   ${head('What makes it different','Not a pitch competition. Not an accelerator.','A competition rewards the pitch and an accelerator takes equity. THE FOUNDRY builds the product, with evidence at every gate, and keeps the idea with its creator.')}
-   <div class="vcols">${[['Pitch competition','A stage and a prize',1,'x'],['Accelerator','Mentoring for equity',2,'x'],['THE FOUNDRY','A built product, your ownership',3,'check']].map((c,k)=>`<article class="vcol rv ${k===2?'hot':''}" style="--d:${k*80}ms"><header><span class="vk">${c[0]}</span><b>${c[1]}</b></header><ul>${cmp.map(r=>`<li><span class="vi">${ic(c[3],16)}</span><div><small>${r[0]}</small><span>${r[c[2]]}</span></div></li>`).join('')}</ul>${k===2?`<div class="vgo">${go('Apply with your idea '+ic('arrow',18),'creator:0','light')}</div>`:''}</article>`).join('')}</div></div></section>
+   ${head('What makes it different','Not a pitch competition. Not an accelerator.','A competition rewards the pitch. An accelerator takes a stake in every company it admits. THE FOUNDRY asks for nothing at application, builds only the ideas it selects, on evidence, and leaves the creator in control.')}
+   ${(()=>{const col=(c,k,extra='')=>`<article class="vcol rv ${k===2?'hot':''} ${extra}" style="--d:${k*80}ms"><header><span class="vk">${c[0]}</span><b>${c[1]}</b></header><ul>${cmp.map(r=>`<li><span class="vi">${ic(c[3],16)}</span><div><small>${r[0]}</small><span>${r[c[2]]}</span></div></li>`).join('')}</ul>${k===2?`<div class="vgo">${go('Apply with your idea '+ic('arrow',18),'creator:0','light')}</div>`:''}</article>`;
+     const cs=[['Pitch competition','A stage and a prize',1,'x'],['Accelerator','Mentoring for equity',2,'x'],['THE FOUNDRY','A built product, with you in control',3,'check']];
+     return col(cs[2],2,'wide')+`<details class="cmpmore rv"><summary>See how pitch competitions and accelerators compare, row by row</summary><div class="vcols two">${col(cs[0],0)}${col(cs[1],1)}</div></details>`})()}</div></section>
 
-  <section class="band dark" id="trust"><div class="wrap split rev">
-   <div class="rv">${IMG(sceneTrust(),'plain')}</div>
-   <div class="rv d2">${head('Trust','Built so you can trust the outcome','Four commitments are written into the platform, the agreements and the way every decision is recorded.')}
-    <div class="cols2">${trust.map((t,i)=>`<div class="feat"><span class="ico">${ic(t[0])}</span><h3>${t[1]}</h3><p>${t[2]}</p></div>`).join('')}</div>
-    <div class="ctas" style="margin-top:22px">${go('Read the Terms of Use','terms','ghost')}${go('Read the Privacy Policy','privacy','ghost')}</div></div></div></section>
+  <section class="band dark tight" id="trust"><div class="wrap">
+   ${head('Trust','Built so you can trust the outcome','Four commitments are built into the platform, the agreements and every recorded decision.')}
+   <div class="trgrid">${trust.map(t=>`<div class="tri rv"><span class="ico">${ic(t[0])}</span><div><h3>${t[1]}</h3><p>${t[2]}</p></div></div>`).join('')}</div>
+   <div class="ctas" style="margin-top:22px">${go('Read the Terms of Use','terms','ghost')}${go('Read the Privacy Policy','privacy','ghost')}</div></div></section>
 
-  <section class="band" id="sponsors"><div class="wrap">
-   ${head('Sponsors and partners','Five ways to take part','Sponsorship supports the programme. It never buys selection or ownership.')}
-   <div class="tiers">${TIERS.map((t,i)=>`<article class="tier rv" style="--d:${i*60}ms;--c:${tierCl[i]}"><span class="tico">${ic(tierIc[i],26)}</span><h3>${t[0]}</h3><dl><dt>You give</dt><dd>${t[1]}</dd><dt>You get</dt><dd>${t[2]}</dd></dl><p class="no">Not included: ${t[3]}</p></article>`).join('')}</div>
-   <div class="row" style="margin-top:26px">${go('Explore the sponsor journey','sponsor:0','primary')}</div></div></section>
+  <section class="band" id="sponsors"><div class="wrap split2">
+   <div class="rv">${head('Sponsors and partners','Five ways to take part','Sponsorship never buys selection. Any stake in a product is agreed in writing, only after selection.')}
+    <div class="row" style="margin-top:6px">${go('Explore the sponsor journey','sponsor:0','primary')}</div></div>
+   <div class="tl rv d2">${TIERS.map((t,i)=>`<details class="tr" ${i===0?'open':''} style="--c:${tierCl[i]}"><summary><span class="tico">${ic(tierIc[i],20)}</span><span class="tn"><b>${t[0]}</b><small>You give: ${t[1]}</small></span></summary><dl><dt>You get</dt><dd>${t[2]}</dd><dt>Not included</dt><dd>${t[3]}</dd></dl></details>`).join('')}</div></div></section>
 
   <section class="band alt" id="faq"><div class="wrap faqw">
-   <div class="rv">${head('Questions','Frequently asked questions','Straight answers about ownership, fees and selection.')}<div class="ask"><span class="ico">${ic('mail')}</span><div><b>Still unsure?</b><p>Book a readiness consultation. It never affects selection.</p></div></div></div>
-   <div class="faq rv d2">${FAQ.map(f=>`<details><summary>${f[0]}</summary><div class="ans">${f[1]}</div></details>`).join('')}</div></div></section>
+   <div class="rv">${head('Questions','Frequently asked questions','Straight answers about ownership, fees and selection.')}<div class="ask"><span class="ico">${ic('mail')}</span><div><b>Still unsure?</b><p>Book an optional consultation (it never affects selection), call <a href="tel:+2348105950658">${PH}</a>, or email <a href="mailto:${EM}">${EM}</a>.</p></div></div></div>
+   <div class="faq rv d2">${FAQ.slice(0,5).map(f=>`<details><summary>${f[0]}</summary><div class="ans">${f[1]}</div></details>`).join('')}<details class="faqmore"><summary>Show ${FAQ.length-5} more questions</summary><div class="faq inner">${FAQ.slice(5).map(f=>`<details><summary>${f[0]}</summary><div class="ans">${f[1]}</div></details>`).join('')}</div></details></div></div></section>
 
-  <section class="cta"><div class="wrap"><div class="rv"><h2>Have an idea worth building?</h2><p>Apply directly, or start with an optional readiness consultation to get an honest first opinion.</p>
+  <section class="cta"><div class="wrap"><div class="rv"><h2>Have an idea worth building?</h2><p>Apply for the Top 3, start with an optional consultation, or commission your own build.</p>
    <div class="ctas">${go('Apply with your idea','creator:0','light lg')}${go('Book a consultation','creator:1','outline lg')}</div></div><div class="ctapic rv d2">${sceneCta()}</div></div></section>
 
 
@@ -1443,18 +1681,63 @@ function viewHome(){
    <div><div class="fbrand">${logo(28)}<span>THE FOUNDRY</span></div><p>Forging Ideas Into Impact. An independent innovation and product-building platform.</p></div>
    <div><h4>Programme</h4><button type="button" class="lk" data-act="scrollTo" data-v="how">How it works</button><button type="button" class="lk" data-act="scrollTo" data-v="dates">Key dates</button><button type="button" class="lk" data-act="scrollTo" data-v="who">Who it is for</button><button type="button" class="lk" data-act="scrollTo" data-v="faq">Questions</button></div>
    <div><h4>Try the platform</h4><button type="button" class="lk" data-goto="creator:0">Creator journey</button><button type="button" class="lk" data-goto="panelist:0">Panelist journey</button><button type="button" class="lk" data-goto="sponsor:0">Sponsor journey</button><button type="button" class="lk" data-goto="partner:0">Partner journey</button></div>
+   <div><h4>Contact</h4><a class="lk" href="tel:+2348105950658">${PH}</a><a class="lk" href="mailto:${EM}">${EM}</a></div>
    <div><h4>Legal</h4><button type="button" class="lk" data-goto="terms">Terms of Use</button><button type="button" class="lk" data-goto="privacy">Privacy Policy</button></div>
-   <div class="legalbar"><span>&#169; 2026 ${ENT}, trading as THE FOUNDRY.</span><span>Cohort 01 dates are indicative.</span></div></div></footer>`}
+   <div class="legalbar"><span>&#169; 2026 ${ENT}.</span><span>Batch 1 dates are indicative.</span></div></div></footer>`}
 
-/* reveal on scroll; content stays visible if observers are unavailable */
-let RVO=null;
+/* ===== scroll animation ===== */
+let RVO=null,CNT=null,SFX=null;
 function homeFx(){
   if(RVO){RVO.disconnect();RVO=null}
-  const els=[...document.querySelectorAll('.rv')];
-  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(CNT){CNT.disconnect();CNT=null}
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fx=(sel,cls,step)=>document.querySelectorAll(sel).forEach((el,i)=>{el.classList.add('rv');if(cls)el.classList.add(cls);if(step!=null)el.style.setProperty('--d',(i*step)+'ms')});
+  fx('.band .head,.stagecopy .head','',null);
+  fx('.gapl li','r',110);
+  fx('.creatorcard .cpic','l',null);fx('.creatorcard .cbody','r',null);
+  fx('.paths2 .path2','z',110);
+  fx('.roles .role','z',null);
+  fx('.vcol.wide','z',null);
+  fx('.trgrid .tri','z',90);
+  fx('.dates .date','z',null);
+  fx('.tl .tr','r',80);
+  fx('.step2','',null);
+  fx('.fact','z',70);
+  fx('.faq>details','',50);
+  if(!reduce){
+    document.querySelectorAll('.hc1,.hc4,.hero2 .copy,.ctapic>*').forEach(e=>e.dataset.px=e.classList.contains('hc1')?'.10':e.classList.contains('hc4')?'.07':e.classList.contains('copy')?'.05':'.06');
+    document.querySelectorAll('.hc2,.hc3').forEach(e=>e.dataset.px=e.classList.contains('hc2')?'-.09':'-.12');
+    document.querySelectorAll('.hmain').forEach(e=>e.dataset.px='-.05');
+  }
+  if(!('IntersectionObserver' in window)||reduce)return;
   document.documentElement.classList.add('rvon');
   RVO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');RVO.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
-  els.forEach(el=>RVO.observe(el));
+  document.querySelectorAll('.rv').forEach(el=>RVO.observe(el));
+  CNT=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;CNT.unobserve(e.target);countUp(e.target)}),{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el=>CNT.observe(el));
+  scrollFx();
+}
+function countUp(el){
+  const to=Number(el.dataset.count),t0=performance.now(),d=1100;
+  const step=t=>{const p=Math.min(1,(t-t0)/d),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=String(v);if(p<1)requestAnimationFrame(step)};
+  el.textContent='0';requestAnimationFrame(step);
+}
+function scrollFx(){
+  if(SFX)return;SFX=1;
+  const bar=document.createElement('div');bar.id='sprog';bar.setAttribute('aria-hidden','true');document.body.appendChild(bar);
+  const up=document.createElement('button');up.type='button';up.id='totop';up.setAttribute('aria-label','Back to top');up.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  up.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));document.body.appendChild(up);
+  let tick=false;
+  const run=()=>{tick=false;
+    const y=window.scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    bar.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')';
+    up.classList.toggle('show',y>900);
+    document.body.classList.toggle('scrolled',y>8);
+    document.querySelectorAll('[data-px]').forEach(el=>{const r=el.getBoundingClientRect();if(r.bottom<-200||r.top>innerHeight+200)return;
+      const d=(r.top+r.height/2)-innerHeight/2;el.style.setProperty('--py',(-d*Number(el.dataset.px)).toFixed(1)+'px')});
+  };
+  const onS=()=>{if(!tick){tick=true;requestAnimationFrame(run)}};
+  addEventListener('scroll',onS,{passive:true});addEventListener('resize',onS);run();
 }
 
 /* ============ JOURNEY DEFINITIONS ============ */
@@ -1468,7 +1751,8 @@ const J={
    {k:'cPitch',t:'Pitch and feedback',url:'ideas/FND-C01-0042/pitch',nav:1,r:()=>cPitch()},
    {k:'cVet',t:'Answer reviewers',url:'ideas/FND-C01-0042/vetting',nav:2,r:()=>cVet()},
    {k:'cTop',t:'Top 3 and agreements',url:'agreements',nav:3,r:()=>cTop()},
-   {k:'cBuild',t:'Run the build',url:'build/surplus-food-match',nav:4,r:()=>cBuild()}]},
+   {k:'cBuild',t:'Run the build',url:'build/surplus-food-match',nav:4,r:()=>cBuild()},
+   {k:'cDirect',t:'Build your product',url:'build/new',nav:4,r:()=>cDirect()}]},
  panelist:{name:'Panelist',title:'For panelists',nav:['Queue','Scoring','Vetting','Decisions'],role:'Panelist',av:'NA',
   screens:[
    {k:'pOnboard',t:'Invitation and onboarding',url:'panel/welcome',nav:0,r:()=>pOnboard()},
@@ -1530,7 +1814,9 @@ A.cSuVerify=()=>{const s=S.c.su;if(/^\d{6}$/.test(s.vcode.trim())){s.ver=true;s.
 A.cSuResend=()=>toast('A new code was sent');
 A.cSuReset=()=>{Object.assign(S.c.su,{sent:false,ver:false,vcode:'',terms:false,priv:false,age:false,pw:'',errs:{}})};
 A.cSkill=el=>{tog(S.c.pr.skills,el.dataset.v,8)};
-A.cBook=()=>{const p=S.c.pr;if(!p.slot){toast('Choose a slot first');return}p.booked=true};
+A.cBook=()=>{const p=S.c.pr;if(p.pkg<0){toast('Choose a consultation first');return}if(!p.slot){toast('Choose a slot first');return}p.booked=true};
+A.cDrSend=()=>{const d=S.c.dr,e={};if(!d.need)e.need='Choose what you want built.';if(!d.stage)e.stage='Choose where your idea is today.';if(d.summary.trim().length<20)e.summary='Describe it in at least 20 characters.';if(!d.consult)e.consult='Choose an answer.';if(!d.ack)e.ack='Tick to confirm.';d.errs=e;if(!Object.keys(e).length)d.sent=true};
+A.cDrReset=()=>{S.c.dr.sent=false;S.c.dr.errs={}};
 A.cApNext=()=>{const a=S.c.ap;a.errs=cApErr(a.step);if(Object.keys(a.errs).length)return;a.saved=new Date();if(a.step<4)a.step++;else{a.sub=true;toast('Application submitted')}};
 A.cApBack=()=>{const a=S.c.ap;a.errs={};a.step=Math.max(0,a.step-1)};
 A.cApReset=()=>{Object.assign(S.c.ap,{sub:false,step:0,ack:false,noConf:false,errs:{}})};
@@ -1649,4 +1935,5 @@ window.addEventListener('DOMContentLoaded',()=>{});
 })();
 
 </script>
+
 </body></html>
