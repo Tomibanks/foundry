@@ -173,6 +173,11 @@ export default async (req) => {
         await saveDoc(doc);
         return json(startSession(doc, u));
       }
+      // Before the first account exists, say which part of the sign-in did not match, so setup mistakes are easy to fix.
+      if (!Object.keys(creds).length && ENVC('ADMIN_EMAIL') && ENVC('ADMIN_PASSWORD')) {
+        if (email !== lc(ENVC('ADMIN_EMAIL'))) return fail(401, 'Setup check: this email does not match the ADMIN_EMAIL setting on the server. Check it in Netlify and sign in with exactly that address.');
+        return fail(401, 'Setup check: the email matches, but the password does not match the ADMIN_PASSWORD setting. Re-enter ADMIN_PASSWORD in Netlify, redeploy and try again.');
+      }
       const rec = creds[email];
       const u = (doc.state.users || []).find((x) => lc(x.email) === email);
       if (!rec || !u || !checkPw(pw, rec)) return fail(401, 'Incorrect email or password. Check your details and try again.');
