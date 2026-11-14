@@ -175,7 +175,11 @@ export default async (req) => {
       }
       // Before the first account exists, say which part of the sign-in did not match, so setup mistakes are easy to fix.
       if (!Object.keys(creds).length && ENVC('ADMIN_EMAIL') && ENVC('ADMIN_PASSWORD')) {
-        if (email !== lc(ENVC('ADMIN_EMAIL'))) return fail(401, 'Setup check: this email does not match the ADMIN_EMAIL setting on the server. Check it in Netlify and sign in with exactly that address.');
+        if (email !== lc(ENVC('ADMIN_EMAIL'))) {
+        const ae = lc(ENVC('ADMIN_EMAIL')), at = ae.indexOf('@');
+        const hint = ae.slice(0, 2) + '...' + (at >= 0 ? ae.slice(at) : ae.slice(-4)) + ' (' + ae.length + ' characters)';
+        return fail(401, 'Setup check: you typed ' + email + ' (' + email.length + ' characters), but the ADMIN_EMAIL on the server looks like ' + hint + '. Make them identical in Netlify and redeploy.');
+      }
         return fail(401, 'Setup check: the email matches, but the password does not match the ADMIN_PASSWORD setting. Re-enter ADMIN_PASSWORD in Netlify, redeploy and try again.');
       }
       const rec = creds[email];
