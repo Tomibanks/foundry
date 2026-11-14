@@ -5,7 +5,11 @@ import crypto from 'node:crypto';
 
 export const config = { path: '/api/*' };
 
-const ENV = (k) => (globalThis.__FDY_ENV && globalThis.__FDY_ENV[k]) ?? process.env[k];
+const ENV = (k) => {
+  if (globalThis.__FDY_ENV && globalThis.__FDY_ENV[k] !== undefined) return globalThis.__FDY_ENV[k];
+  try { const v = globalThis.Netlify && globalThis.Netlify.env && globalThis.Netlify.env.get(k); if (v !== undefined && v !== null && v !== '') return v; } catch {}
+  return process.env[k];
+};
 const store = () => globalThis.__FDY_STORE || getStore({ name: 'foundry', consistency: 'strong' });
 
 const json = (data, status = 200) =>
