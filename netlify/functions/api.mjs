@@ -10,6 +10,8 @@ const ENV = (k) => {
   try { const v = globalThis.Netlify && globalThis.Netlify.env && globalThis.Netlify.env.get(k); if (v !== undefined && v !== null && v !== '') return v; } catch {}
   return process.env[k];
 };
+// Imported .env values can carry stray spaces, line endings or quotes. Clean them.
+const ENVC = (k) => { const v = ENV(k); return typeof v === 'string' ? v.replace(/^\s*(["'])(.*)\1\s*$/, '$2').trim() : v; };
 const store = () => globalThis.__FDY_STORE || getStore({ name: 'foundry', consistency: 'strong' });
 
 const json = (data, status = 200) =>
@@ -36,7 +38,7 @@ function checkPw(pw, rec) {
   const b = Buffer.from(rec.hash, 'hex');
   return b.length === h.length && crypto.timingSafeEqual(b, h);
 }
-const secret = () => ENV('SESSION_SECRET');
+const secret = () => ENVC('SESSION_SECRET');
 function sign(payload) {
   const body = Buffer.from(JSON.stringify(payload)).toString('base64url');
   const sig = crypto.createHmac('sha256', secret()).update(body).digest('base64url');
@@ -86,7 +88,7 @@ function startSession(doc, user) {
 
 /* ---------- email ---------- */
 async function sendInviteEmail(user, link, inviter) {
-  const key = ENV('RESEND_API_KEY'), from = ENV('FROM_EMAIL');
+  const key = ENVC('RESEND_API_KEY'), from = ENVC('FROM_EMAIL');
   if (!key || !from) return { sent: false, reason: 'Email is not configured (set RESEND_API_KEY and FROM_EMAIL).' };
   const first = String(user.name).split(' ')[0];
   const article = /^[aeiou]/i.test(user.role) ? 'an' : 'a';
@@ -103,7 +105,7 @@ async function sendInviteEmail(user, link, inviter) {
   } catch (e) { return { sent: false, reason: 'Could not reach the email provider.' }; }
 }
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const siteUrl = (req) => (ENV('SITE_URL') || new URL(req.url).origin).replace(/\/$/, '');
+const siteUrl = (req) => (ENVC('SITE_URL') || new URL(req.url).origin).replace(/\/$/, '');
 
 /* ---------- invitations ---------- */
 async function createInvite(req, a, input) {
@@ -153,7 +155,7 @@ export default async (req) => {
 
   try {
     if (path === 'health') {
-      return json({ ok: true, configured: !!secret(), mail: !!(ENV('RESEND_API_KEY') && ENV('FROM_EMAIL')), bootstrap: !!(ENV('ADMIN_EMAIL') && ENV('ADMIN_PASSWORD')) });
+      return json({ ok: true, configured: !!secret(), mail: !!(ENVC('RESEND_API_KEY') && ENVC('FROM_EMAIL')), bootstrap: !!(ENVC('ADMIN_EMAIL') && ENVC('ADMIN_PASSWORD')), firstRun: !Object.keys(await getJ('creds', {})).length });
     }
     if (!secret()) return fail(500, 'SESSION_SECRET is not set on the server.');
 
@@ -163,10 +165,10 @@ export default async (req) => {
       let creds = await getJ('creds', {});
       const doc = await loadDoc();
       // First run: create the Super admin from environment variables.
-      if (!Object.keys(creds).length && ENV('ADMIN_EMAIL') && email === lc(ENV('ADMIN_EMAIL')) && pw === ENV('ADMIN_PASSWORD')) {
-        const u = { id: 'u1', name: ENV('ADMIN_NAME') || 'Programme admin', email, role: 'Super admin', state: 'Active', joined: today() };
+      if (!Object.keys(creds).length && ENVC('ADMIN_EMAIL') && email === lc(ENVC('ADMIN_EMAIL')) && pw.trim() === ENVC('ADMIN_PASSWORD')) {
+        const u = { id: 'u1', name: ENVC('ADMIN_NAME') || 'Programme admin', email, role: 'Super admin', state: 'Active', joined: today() };
         doc.state.users = [u];
-        creds[email] = hashPw(pw);
+        creds[email] = hashPw(pw.trim());
         await setJ('creds', creds);
         await saveDoc(doc);
         return json(startSession(doc, u));
